@@ -33,13 +33,13 @@ const ProjectCard = ({title="", year="", description="", source_link=null, demo_
             <h4>{description}</h4>
             <ul className='Project-link-shelf'>
                 {source_link && <li>
-                    <a href={`https://${source_link}`} target='_blank' className='color-A Project-link' rel="noopener noreferrer">&gt; source</a>
+                    <a href={source_link} target='_blank' className='color-A Project-link' rel="noopener noreferrer">&gt; source</a>
                 </li>}
                 {demo_link && <li>
-                    <a href={`https://${source_link}`} target='_blank' className='color-B Project-link' rel="noopener noreferrer">&gt;  demo</a>
+                    <a href={source_link} target='_blank' className='color-B Project-link' rel="noopener noreferrer">&gt;  demo</a>
                 </li>}
                 {article_link && <li>
-                    <a href={`https://${source_link}`} target='_blank' className='color-C Project-link' rel="noopener noreferrer">&gt; article</a>
+                    <a href={source_link} target='_blank' className='color-C Project-link' rel="noopener noreferrer">&gt; article</a>
                 </li>}
             </ul>
         </div>
@@ -66,18 +66,34 @@ const Home = () => {
                 <p>Projects I’ve made in the past years, including this website, some deep learning, and windows applications</p>
                 <div className='ProjectCard-container'>
                     <ProjectCard
-                        title="Boid Sim"
-                        year="2023"
-                        description="lots of moving triangles and loud fan."
-                        source_link="www.google.com"
-                        demo_link="www.google.com"
-                        article_link="www.google.com"
+                        title="This Website!"
+                        year="2024"
+                        description="Learned to use React, RouterDOM, and Hooks."
+                        source_link="https://github.com/ldoughty05/PersonalWebsite"
                     />
                     <ProjectCard
-                        title="Webpage"
+                        title="Character Classifier"
                         year="2024"
-                        description="Im learning to use React!"
-                        demo_link="www.reddit.com"
+                        description="Deep learning MNIST classifier with a GUI so you can try it with your own handwriting."
+                        source_link="https://github.com/ldoughty05/character_classifier"
+                    />
+                    <ProjectCard
+                        title="Deep Learning Basics"
+                        year='2023'
+                        description="text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
+                        source_link={'https://github.com/ldoughty05/Deep-Learning'}
+                    />
+                    <ProjectCard
+                        title="Matrix Relations"
+                        year="2024"
+                        description='finds discrete math relations in a given matrix.'
+                        source_link={'https://github.com/ldoughty05/matrix_relations'}
+                    />
+                    <ProjectCard
+                        title='Boid Simulator'
+                        year='2023'
+                        description='simulates the flocking behavior of birds in 2d space.'
+                        source_link={'https://github.com/ldoughty05/boidSim'}
                     />
                 </div>
             </body>

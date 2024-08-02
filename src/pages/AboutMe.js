@@ -145,8 +145,8 @@ const PageText = () => {
         <p>
           <h1>Let's talk!</h1>
           luke.doughty@me.com <br/><br/>
-          www.linkedin.com/in/lukedoughty <br/><br/>
-          www.github.com/ldoughty05
+          <a href='https://www.linkedin.com/in/lukedoughty'>linkedin.com/in/lukedoughty</a> <br/><br/>
+          <a href='https://www.github.com/ldoughty05'>github.com/ldoughty05</a>
 
         </p>
       </div>

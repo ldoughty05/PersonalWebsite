@@ -68,7 +68,6 @@ body {
     position: relative;
     display: flex;
     background-color: var(--body-backdrop-B);
-    pointer-events: none;
     height: 3150px;
 }
 
