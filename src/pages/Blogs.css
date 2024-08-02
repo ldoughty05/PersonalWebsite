@@ -1,0 +1,37 @@
+.Blogs{
+    overflow: hidden;
+
+    background-image: url("./CloudyWin98.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Blogs-taskbar {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 100vw;
+    background-color: #c3c3c3;
+    border-style: outset;
+    margin-top: auto;
+    padding-left: 10px;
+}
+
+.Blogs-taskbar-home-button {
+    text-decoration: none;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    padding: 7px;
+    border-style: outset;
+}
+
+.Blogs h1 {
+    position: relative;
+    top: 40%;
+    color: wheat;
+}

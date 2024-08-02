@@ -1,0 +1,217 @@
+:root {
+    --battle-backdrop-A: #e5a91e;
+    --battle-backdrop-B: #eb9e47;
+    --body-backdrop-A: #ba99d7;
+    --body-backdrop-B: #B9A2D0;
+    --body-textbox: #CEB7E4;
+}
+
+body {
+    margin: 0;
+}
+
+.AboutMe {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.AboutMe-black-bar {
+    position: sticky;
+    background-color: rgb(0, 0, 0);
+    top: 0px;
+    width: calc(100vw - 30px);
+    height: 70px;
+    z-index: 1;
+    padding: 15px;
+}
+
+.BackLink {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+}
+.BackLink:hover{
+    color: #F64822;
+}
+
+.AboutMe-battle-backdrop {
+    background-color: var(--battle-backdrop-A);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40vh;
+}
+
+
+.checker-pattern-svg {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.AboutMe-battle-backdrop .checker{
+    fill: var(--battle-backdrop-B);
+}
+
+.AboutMe-headshot {
+    height: 35vh;
+    pointer-events: none;
+    margin-bottom: 50px;
+    position: absolute;
+}
+.AboutMe-body-container {
+    position: relative;
+    display: flex;
+    background-color: var(--body-backdrop-B);
+    pointer-events: none;
+    height: 3150px;
+}
+
+.AboutMe-body-container .checker{
+    fill: var(--body-backdrop-A);
+}
+
+.AboutMe-top-text-box-container {
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    z-index: 2;
+}
+
+.AboutMe-top-text-box {
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 20px;
+
+    padding: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.AboutMe-text-box-label {
+    margin: 0;
+    position: absolute;
+    top: -15px;
+    left: 65px;
+    background-color: black;
+    padding: 0 10px 0 10px;
+}
+
+.AboutMe-top-text-box h1{
+    font-size: 1.75em;
+}
+
+.AboutMe-top-text-box p{
+    margin: 0;
+}
+
+.AboutMe-body {
+    position: absolute;
+}
+
+.AboutMe-body-padding {
+    margin: 100px 40px 0px 40px;
+    height: auto;
+}
+
+.AboutMe-body-page {
+    /* Instead of a fixed height, I should change the card focus to just increment whenever the next page appears on screen*/
+    height: 1000px;
+}
+
+.AboutMe-body p {
+    position: relative;
+    border-style: groove;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--body-textbox);
+    font-family: sans-serif;
+}
+
+.AboutMe-body p img{
+    height: 20vmin;
+    pointer-events: none;
+}
+
+.AboutMe-body p h1{
+    margin-top: 0;
+    font-family: sans-serif;
+}
+
+.TopicCard-shelf-container {
+    position: sticky;
+    width: 100vw;
+    height: 0;
+    top: 130px;
+    z-index: 2;
+}
+
+.TopicCard-shelf {
+    position: relative;
+    top: -70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.TopicCard-container {
+    position: relative;
+    display: flex;
+    width:130px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.focused-card {
+    top: -35px;
+}
+
+.TopicCard-padding {
+    padding: 5px;
+    /* The height of the TopicCards is being determined by the rect from the checkers, but idk why it is 150px and I don't know how to change it.*/
+    width:130px;
+}
+
+.TopicCard-color {
+    background-color: var(--body-backdrop-A);
+}
+
+.TopicCard-color .checker {
+    fill: var(--body-backdrop-B)
+}
+
+.TopicCard-overlay {
+    position: absolute;
+    width: 130px;
+    height: 160px;
+    text-align: center;
+
+}
+
+.TopicCard-content {
+    /* Im sorry this is so badly hardcoded. I tried my best not to, but ultimately gave in. */
+    /* Maybe if I used images of the card frames rather than borders I wont have pixel shifting issues*/
+    position: relative;
+    border-style: solid;
+    border-width: 8px;
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    height: 139px;
+    padding: 3px;
+
+}
+
+.TopicCard-container h3{
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+

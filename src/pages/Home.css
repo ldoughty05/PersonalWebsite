@@ -1,0 +1,153 @@
+:root {
+    --line-height: calc(10px + 2vmin);
+    --background-color: #C5C5C5;
+    --colorA: #F64822;
+    --colorB: #F6A122;
+    --colorC: #F6E122;
+    --card-color: #D9D9D9;
+}
+
+body {
+    margin: 0;
+}
+.Home {
+    text-align: center;
+}
+
+.Home-header {
+    background-color: var(--colorA);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--line-height);
+    color: white;
+}
+
+.Home-logo {
+    height: 30vmin;
+    pointer-events: none;
+    margin-bottom: var(--line-height);
+}
+
+.Home-links {
+    color: white;
+    font-family: "Source Code Pro", Monospace, "Lucida Console"; 
+    text-decoration: none;
+    text-align: left;
+    width: 80vw;
+    padding-top: calc(var(--line-height)/2);
+    padding-bottom: calc(var(--line-height)/2);
+}
+
+.Home-links:hover {
+    background-color: #ffffff47;
+}
+
+.Projects-page {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    font-size: var(--line-height);
+    color: black;
+;
+}
+
+.Projects-body {
+    margin: 0 40px 0 40px;
+}
+
+.Projects-banner-large {
+    width: 100vw;
+    height: 50px;
+}
+
+.Projects-banner-small {
+    width: 100vw;
+    height: 25px;
+}
+
+.color-A {
+    background-color: var(--colorA);
+}
+.color-B {
+    background-color: var(--colorB);
+}
+.color-C {
+    background-color: var(--colorC);
+}
+
+.Projects-uparrow {
+    height: 25px;
+    padding: 10px 20vh 10px 20vh;
+    filter: invert(100%)
+    /* pointer-events: none; */
+}
+.Projects-uparrow:hover {
+    filter: invert(50%)
+}
+
+h1 {
+    font-family: 'DM Serif Text', 'Times New Roman', serif;
+    text-align: left;
+}
+
+p {
+    font-family: 'DM Serif Text', 'Times New Roman', serif;
+    text-align: left;
+}
+
+.ProjectCard-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+@media (orientation: portrait){
+    .ProjectCard-container {
+        grid-template-columns: 100%;
+    }
+}
+
+.ProjectCard {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    text-align: left;
+    padding: 15px;
+}
+
+h3 {
+    margin-top: 0;
+    color: var(--colorA);
+    font-size: 1.0em;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h4 {
+    font-size: 0.75em;
+    font-weight: normal;
+}
+
+.Project-link-shelf {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.Project-link {
+    font-size: 0.75em;
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+}
