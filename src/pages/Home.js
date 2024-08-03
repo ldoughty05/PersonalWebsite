@@ -80,19 +80,13 @@ const Home = () => {
                     <ProjectCard
                         title="Deep Learning Basics"
                         year='2023'
-                        description="text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
+                        description="Text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
                         source_link={'https://github.com/ldoughty05/Deep-Learning'}
-                    />
-                    <ProjectCard
-                        title="Matrix Relations"
-                        year="2024"
-                        description='finds discrete math relations in a given matrix.'
-                        source_link={'https://github.com/ldoughty05/matrix_relations'}
                     />
                     <ProjectCard
                         title='Boid Simulator'
                         year='2023'
-                        description='simulates the flocking behavior of birds in 2d space.'
+                        description='Simulates the flocking behavior of birds in 2d space.'
                         source_link={'https://github.com/ldoughty05/boidSim'}
                     />
                 </div>

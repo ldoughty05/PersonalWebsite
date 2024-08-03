@@ -2,48 +2,54 @@ import { Link } from 'react-router-dom';
 import './AboutMe.css';
 import headshot from './PixelArtLuke.png';
 import earthboundBattle from './EarthboundBattle.gif'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const topicLabels = ["Hobbies", "Resume", "Contact"];
 
-function useFocusCardIndex() {
-  const [focusCard, setFocusCard] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      let zeroIndexArea = 500;
-      let scrollPosition = window.scrollY;
-      let windowHeight = window.innerHeight;
-      /*I might want to use the scroll height of AboutMe-body instead*/
-      let documentHeight = document.documentElement.scrollHeight;
 
-      if (scrollPosition <= zeroIndexArea) {
-        setFocusCard(0);
-      } else {
-        let scrollPercentage = ((scrollPosition - zeroIndexArea) / (documentHeight - windowHeight - zeroIndexArea));
-        let totalCards = topicLabels.length;
-        let cardHeightPercentage = 1 / (totalCards - 1);
-        let focusedCardIndex = Math.floor(scrollPercentage / cardHeightPercentage) + 1;
-  
-        setFocusCard(focusedCardIndex);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  return focusCard;
+export const useIntersection = (element, rootMargin) => {
+  //Returns whether or not 
+  const [isVisible, setState] = useState(false);
+
+  useEffect(() => {
+    const current = element?.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setState(entry.isIntersecting);
+      },
+      { rootMargin }
+    );
+    current && observer?.observe(current);
+
+    return () => current && observer.unobserve(current);
+  }, [element, rootMargin]);
+
+  return isVisible;
+};
+// <SetFocusCardIndexOnVisibile index=0>
+
+const DummyElement = ({ callbackFn }) => {
+  //Triggers 'callbackFn' when this div is visible on screen.
+  const triggerRef = useRef(null);
+  const isVisible = useIntersection(triggerRef, "0px");
+
+  useEffect(() => {
+    if (isVisible) {
+      callbackFn();
+    }
+  });
+  return <div ref={triggerRef} />;
 }
 
-const TopicCardGenerator = () => {
-  const focusCard = useFocusCardIndex();
 
+const TopicCardGenerator = ({ focusCardIndex }) => {
   let topicCards = topicLabels.map((label, index) => (
-    <TopicCard key={index} id={index} label={label} className={focusCard === index ? "focused-card" : ""}/>
+    <TopicCard key={index} id={index} label={label} className={focusCardIndex === index ? "focused-card" : ""}/>
   ))
 
   return topicCards;
 }
+
 
 const TopicCard = ({id=0, label="", className=""}) => {
     /* Maybe I could make this the shelf instead, and I imput an array of labels and it makes a card for each label 
@@ -68,6 +74,7 @@ const TopicCard = ({id=0, label="", className=""}) => {
   )
 }
 
+
 const CheckeredArea = ({patternID="", checker_size=50}) => {
   return (
     <svg className='checker-pattern-svg'>
@@ -82,10 +89,11 @@ const CheckeredArea = ({patternID="", checker_size=50}) => {
   );
 }
 
-const PageText = () => {
-    return (
-    <>
+
+const PageText = ({ setFocusIndex }) => {
+    return [(
       <div className='AboutMe-body-page'>
+        <DummyElement callbackFn={() => setFocusIndex(0)}/>
         <p>
           In my free time I really enjoy lifting weights. Working out is something
           I can do alone any time, or I can go there to hang out with friends. I am a
@@ -97,17 +105,21 @@ const PageText = () => {
           Muscle Up Rep Max: 3
         </p>
         <p>
-          My all time favorite video game is called Earthbound. It is about a kid named 
-          Ness who saves the world from an alien invasion. It is hillariously unserious 
-          which is why I love it. The layout of this page is inspired by Earthbound's 
-          battle GUI. <br/><br/>
+          The layout of this page is inspired by my all time favorite video game, Earthbound. 
+          It is a turn based RPG about a kid named Ness who saves the world from an alien invasion. 
+          The story and charaters are hillariously unserious which is why I love it. The battle GUI
+          features unique, colorful background animations and music which differ for each enemy type.
+          I tried to reflect the general layout of the battle GUI for this page. The image below is 
+          from the game. How did I do?<br/><br/>
           <img src={earthboundBattle} alt="Gif showing the battle GUI from Earthbound"/>
         </p>
+        <DummyElement callbackFn={() => setFocusIndex(0)}/>
       </div>
-
+    ),(
       <div className='AboutMe-body-page'>
+        <DummyElement callbackFn={() => setFocusIndex(1)}/>
         <p>
-          <h1> Work Experience and Involvement</h1>
+          <h1> Work Experience and Involvement</h1> {/* TODO: Not supposed to keep extra stuff in my p's. Fix this later*/}
           <strong>Huskertech, IT Assistant</strong>, Lincoln, NE 	<i>January 2024 – Present</i> <br/>
           •	Providing technical support to students and faculty/staff by email, phone, support tickets, or in person.<br/>
           •	Troubleshooting problems with software, operating systems, computer hardware, and network connections.<br/>
@@ -139,60 +151,64 @@ const PageText = () => {
           •	Planned and oversaw a service project to repair and improve a 500ft fence around a historic farm. <br/>
           •	Recruited and managed volunteers as well as improvising effective long-term solutions to unforeseen roadblocks.<br/>
         </p>
+        <DummyElement callbackFn={() => setFocusIndex(1)}/>
       </div> 
-
+    ),(
       <div className='AboutMe-body-page'>
+        <DummyElement callbackFn={() => setFocusIndex(2)}/>
+
         <p>
           <h1>Let's talk!</h1>
           luke.doughty@me.com <br/><br/>
           <a href='https://www.linkedin.com/in/lukedoughty'>linkedin.com/in/lukedoughty</a> <br/><br/>
           <a href='https://www.github.com/ldoughty05'>github.com/ldoughty05</a>
-
         </p>
       </div>
-    </>)
+    )];
 }
 
+
 const AboutMe = () => {
-    return (
-      <div className="AboutMe">
-          <div className='AboutMe-black-bar'>
-            <Link to="/" className='BackLink'>&lt; Back</Link>
+  const [focusIndex, setFocusIndex] = useState(0); //Should I keep prop drilling this or instead should I establish a React Context?
+  return (
+    <div className="AboutMe">
+        <div className='AboutMe-black-bar'>
+          <Link to="/" className='BackLink'>&lt; Back</Link>
+        </div>
+        <div className='AboutMe-battle-backdrop'>
+          <CheckeredArea
+            checker_size={30}
+            patternID={'AboutMe-battle-backdrop-checker-pattern'}
+          />
+          <img src={headshot} className='AboutMe-headshot' alt="Headshot"></img>
+        </div>
+        <div className='TopicCard-shelf-container'>
+          <div className='TopicCard-shelf'>
+              <TopicCardGenerator focusCardIndex={focusIndex} />
           </div>
-          <div className='AboutMe-battle-backdrop'>
-            <CheckeredArea
-              checker_size={30}
-              patternID={'AboutMe-battle-backdrop-checker-pattern'}
-            />
-            <img src={headshot} className='AboutMe-headshot' alt="Headshot"></img>
-          </div>
-          <div className='TopicCard-shelf-container'>
-            <div className='TopicCard-shelf'>
-                <TopicCardGenerator/>
-            </div>
-          </div>
-          <div className='AboutMe-body-container'>
-            <CheckeredArea
-              checker_size={15}
-              patternID={'AboutMe-body-checkers-pattern'}
-            />
-            <div className='AboutMe-body'>
-              <div className='AboutMe-body-padding'>
-                <PageText />
-              </div>
-            </div>
-            
-          </div>
-          <div className='AboutMe-top-text-box-container'>
-            <div className='AboutMe-top-text-box'>
-              <h1 className='AboutMe-text-box-label'>Luke Doughty</h1>
-              <p>Hello! I’m a software developer and a computer vision researcher. 
-                Check out what I’ve been working on!</p>
+        </div>
+        <div className='AboutMe-body-container'>
+          <CheckeredArea
+            checker_size={15}
+            patternID={'AboutMe-body-checkers-pattern'}
+          />
+          <div className='AboutMe-body'>
+            <div className='AboutMe-body-padding'>
+              <PageText setFocusIndex={setFocusIndex} />
             </div>
           </div>
           
-      </div>
-    );
-  };
+        </div>
+        <div className='AboutMe-top-text-box-container'>
+          <div className='AboutMe-top-text-box'>
+            <h1 className='AboutMe-text-box-label'>Luke Doughty</h1>
+            <p>Hello! I’m a software developer and a computer vision researcher. 
+              Check out what I’ve been working on!</p>
+          </div>
+        </div>
+        
+    </div>
+  );
+};
   
 export default AboutMe;
