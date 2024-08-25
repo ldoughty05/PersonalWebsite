@@ -1,29 +1,56 @@
 import "./Blogs.css"
 import { Link } from 'react-router-dom';
-import React, { StrictMode, useState } from 'react';
+import React, { StrictMode, useState, useEffect, useMemo } from 'react';
+
 
 import foldericon from "./directory_closed-4.png";
 
 import CPILocatorPt1 from "./BlogPosts/CPILocatorPt1";
 import ReactQuickstart from "./BlogPosts/ReactQuickstart";
 
-const ContentWindow = ({title, openedFileIndex, setOpenedFileIndex, children}) => {
-  if (openedFileIndex.current !== 0)
+export const useMediaQuery = (query) => {
+  const mediaQuery = useMemo(() => window.matchMedia(query), [query]);
+  const [match, setMatch] = useState(mediaQuery.matches);
+
+  useEffect(() => {
+    const onChange = () => setMatch(mediaQuery.matches);
+    mediaQuery.addEventListener("change", onChange);
+
+    return () => mediaQuery.removeEventListener("change", onChange);
+  }, [mediaQuery]);
+
+  return match;
+}
+
+
+const TaskbarButtons = ({openedFileName, setOpenedFileName}) => {
+  const desktop = useMediaQuery("(min-width: 680px)");
+  if (desktop) 
+    return (
+    <>
+      <button onClick={() => setOpenedFileName("File Explorer")}>Explorer</button>
+      <button onClick={() => setOpenedFileName(openedFileName.previous)}>Back</button>
+      <button onClick={() => setOpenedFileName("")}>X</button>
+    </>
+  )
+  return null
+}
+
+const ContentWindow = ({openedFileName, setOpenedFileName, children}) => {
+  if (openedFileName.current !== "")
     return (
       <StrictMode>
         <div className="ContentWindow">
           <div className="ContentWindow-top-bar">
-            <h3 className="window-name">{title}</h3>
+            <h3 className="window-name">{openedFileName.current}</h3>
             <div className="button-shelf">
-              <button onClick={() => setOpenedFileIndex(1)}>Explorer</button>
-              <button onClick={() => setOpenedFileIndex(openedFileIndex.previous)}>Back</button>
-              <button onClick={() => setOpenedFileIndex(0)}>X</button>
+              <TaskbarButtons openedFileName={openedFileName} setOpenedFileName={setOpenedFileName}/>
             </div>
           </div>
           <div className="ContentWindow-page-container">
             <div className="ContentWindow-page">
               <div className="ContentWindow-page-content">
-                <FileDirectory index={openedFileIndex} setOpenedFileIndex={setOpenedFileIndex}/>
+                <FileDirectory openedFileName={openedFileName} setOpenedFileName={setOpenedFileName}/>
               </div>
             </div>
           </div>
@@ -33,7 +60,7 @@ const ContentWindow = ({title, openedFileIndex, setOpenedFileIndex, children}) =
   return null
 }
 
-const FileExplorer = ({setOpenedFileIndex}) => {
+const FileExplorer = ({setOpenedFileName}) => {
   return (
     <StrictMode>
       <div className="FileExplorer" >
@@ -46,15 +73,15 @@ const FileExplorer = ({setOpenedFileIndex}) => {
           </thead>
           <tbody>
             <tr>
-              <td onClick={() => setOpenedFileIndex(2)}>React Quickstart</td>
+              <td onClick={() => setOpenedFileName("React Quickstart")}>React Quickstart</td>
               <td>8/25/2024</td>
             </tr>
             <tr>
-              <td onClick={() => setOpenedFileIndex(3)}>Using Deep Learning to Locate CPIs</td>
+              <td onClick={() => setOpenedFileName("CPI Locator Overview Pt1")}>Using Deep Learning to Locate CPIs</td>
               <td>8/23/2024</td>
             </tr>
             <tr>
-              <td onClick={() => setOpenedFileIndex(4)}>Docker </td>
+              <td onClick={() => setOpenedFileName("Docker")}>Docker </td>
               <td>8/24/2024</td>
             </tr>
           </tbody>
@@ -64,33 +91,33 @@ const FileExplorer = ({setOpenedFileIndex}) => {
   )
 }
 
-const FileDirectory = ({index, setOpenedFileIndex}) => {
-  return [
-    null,
-    <FileExplorer setOpenedFileIndex={setOpenedFileIndex}/>,
-    <ReactQuickstart/>,
-    <CPILocatorPt1/>,
-  ][index.current]
+const FileDirectory = ({openedFileName, setOpenedFileName}) => {
+  const fileDict = {
+    "File Explorer": <FileExplorer setOpenedFileName={setOpenedFileName}/>,
+    "React Quickstart": <ReactQuickstart/>,
+    "CPI Locator Overview Pt1": <CPILocatorPt1/>,
+  }
+  console.log(openedFileName)
+  return fileDict[openedFileName.current] || null;
 }
 
 const Blogs = () => {
-  const [openedFileIndex, setOpenedFileIndex] = useState({ current: 1, previous: 1 });
-
-  const updateFileIndex = (newIndex) => {
-    setOpenedFileIndex((prevState) => ({
-      current: newIndex,
-      previous: prevState.current !== 0 ? prevState.current : prevState.previous /* if the current state is 0, dont set the previous to zero after I reassign anything (we dont want back to close the window)*/
+  const [openedFileName, setOpenedFileName] = useState({ current: "File Explorer", previous: "File Explorer" });
+  const updateFileName = (newFile) => {
+    setOpenedFileName((prevState) => ({
+      current: newFile,
+      previous: prevState.current === "" ? prevState.previous : prevState.current /* (we dont want back to a closed window*/
     }));
   }
 
   return (
     <StrictMode>
       <div className="Blogs">
-        <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-desktop" onClick={() => updateFileIndex(1)}/>
-        <ContentWindow title="File Explorer" openedFileIndex={openedFileIndex} setOpenedFileIndex={updateFileIndex} />
+        <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-desktop" onClick={() => updateFileName("File Explorer")}/>
+        <ContentWindow openedFileName={openedFileName} setOpenedFileName={updateFileName} />
         <div className="Blogs-taskbar">
           <Link to="/" className="Blogs-taskbar-home-button">Home</Link>
-          <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-taskbar"/>
+          <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-taskbar" onClick={() => updateFileName("File Explorer")}/>
 
         </div>
       </div>

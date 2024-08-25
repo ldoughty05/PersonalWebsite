@@ -42,7 +42,6 @@ pre.code {
     font-family: monospace;
     font-size: 15px;
     line-height: 1.6;
-    padding: 1em 1.5em;
     overflow-x: auto;
     box-sizing: border-box;
     margin: 0;
@@ -52,7 +51,6 @@ pre.code {
 code {
     background: #f4f4f4;
     font-family: monospace;
-
 }
 
 

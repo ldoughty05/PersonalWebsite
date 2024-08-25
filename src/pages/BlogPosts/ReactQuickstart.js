@@ -1,4 +1,22 @@
 const ReactQuickstart = () => {
+    const installCodeSnippet = `
+    # installs nvm (Node Version Manager) <br/>
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash <br/>
+    # download and install Node.js (you may need to restart the terminal)<br/>
+    nvm install 20<br/>
+    # verifies the right Node.js version is in the environment<br/>
+    node -v <br/>
+    # should print 'v20.16.0'<br/>
+    # verifies the right npm version is in the environment<br/>
+    npm -v <br/>
+    # should print '10.8.1'
+    `;
+
+    const npmCodeSnippet = `
+    npm i -D react-router-dom <br/>
+    npm audit fix
+    `;
+
     const indexjsCodeSnippet = `
     import ReactDOM from "react-dom/client";
     import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -27,6 +45,40 @@ const ReactQuickstart = () => {
     root.render(<App />);
     `;
     
+    const layoutjsCodeSnippet = `
+    import { Outlet, Link } from "react-router-dom";
+    const Layout = () => {
+        return (
+        <>
+            <nav>
+            <ul>
+                <li>
+                <Link to="/">Home</Link>
+                </li>
+                <li>
+                <Link to="/blogs">Blogs</Link>
+                </li>
+                <li>
+                <Link to="/contact">Contact</Link>
+                </li>
+            </ul>
+            </nav>
+
+            <Outlet />
+        </>
+        )
+    };
+
+    export default Layout;
+    `;
+
+    const genericWebpageCodeSnippet = `
+    const Home = () => {
+        return <h1>Home</h1>;
+        };
+
+        export default Home;
+    `;
 
     return (
         <div className="page">
@@ -44,19 +96,7 @@ const ReactQuickstart = () => {
                 help installing the correct version of Node.js for your system.</p>
                 <p>This is what I used: </p>
                 <div className="snippet-container">
-                    {/* <div className="testDiv"></div> */}
-                    <pre className="code">
-                    # installs nvm (Node Version Manager) <br/>
-                    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash <br/>
-                    # download and install Node.js (you may need to restart the terminal)<br/>
-                    nvm install 20<br/>
-                    # verifies the right Node.js version is in the environment<br/>
-                    node -v <br/>
-                    # should print `v20.16.0`<br/>
-                    # verifies the right npm version is in the environment<br/>
-                    npm -v <br/>
-                    # should print `10.8.1`
-                    </pre>
+                    <pre className="code">{installCodeSnippet}</pre>
                 </div>
                 <h2>Step 2. Create the project</h2>
                 <p><code>cd</code> into the folder where you want to keep your project folder.</p>
@@ -64,12 +104,9 @@ const ReactQuickstart = () => {
                 <p><code>cd</code> into your newly made directory.</p>
                 <p>Since our project will be a multi page website, we  need to install the React Router DOM.</p>
                 <div className="snippet-container">
-                    <pre className="code">
-                        npm i -D react-router-dom <br/>
-                        npm audit fix
-                    </pre>
+                    <pre className="code">{npmCodeSnippet}</pre>
                 </div>
-                <p>It will still show that there are some vulnerabilities, but fixing them only breaks stuff, so for our use case we can ignore them.</p>
+                <p>It will still show that there are some vulnerabilities,  but fixing them only breaks stuff, so for our use case we can ignore them.</p>
                 <p>Run <code>npm start</code> to start the local web server.</p>
                 <p>Open your IDE. I’m using VSCode so I can do <code>code .</code></p>
                 <h2>Step 3. Creating the page router</h2>
@@ -79,7 +116,25 @@ const ReactQuickstart = () => {
                 <div className="snippet-container">
                     <pre className="code">{indexjsCodeSnippet}</pre>
                 </div>
-                
+                <p>Notice the first Route is a parent to the others. This means that you can create html and css that gets inherited by all the pages whose 
+                    routes are its children so you don’t have to copy and paste css into each one.  Whatever I put in Layout.js will be shared with all my 
+                    other pages.</p>
+                <p>The code above includes routes to pages called “Blogs” and “Contact”, but they can be whatever you want them to be. You can also add more pages.</p>
+                <p>The route where the path is a wildcard (path=”*”) means that it will route to that page whenever the path is something that hasn’t previously been defined. 
+                    Perfect for a page not found message.</p>
+                <p>In your src folder, create a new folder named “pages”.</p>
+                <p>In the pages folder create a file named Layout.js.</p>
+                <p>Inside Layout.js paste the following code:</p>
+                <div className="snippet-container">
+                    <pre className="code">{layoutjsCodeSnippet}</pre>
+                </div>
+                <p>This includes links between the pages. Since it is in the Layout.js, and since all the other pages appear as its children in our index.js, 
+                    all of our pages will include these links.</p>
+                <p>In your src/pages folder create files for each of the pages you want for your project. Mine includes Home.js, Blogs.js, Contact.js, and NoPage.js.</p>
+                <p>The content of each of those files is similar to this:</p>
+                <div className="snippet-container">
+                    <pre className="code">{genericWebpageCodeSnippet}</pre>
+                </div>
             </div>
         </div>
     )
