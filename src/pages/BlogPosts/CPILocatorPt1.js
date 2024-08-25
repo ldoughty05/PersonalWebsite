@@ -1,3 +1,5 @@
+import "./BlogPosts.css";
+
 const CPILocatorPt1 = () => {
     return (
         <>
@@ -5,6 +7,7 @@ const CPILocatorPt1 = () => {
             <p><em>Using Tensorflow in Colab and Google's Vertex AI to identify central pivot irrigators from Landsat 9 imagery</em></p>
             <hr/>
             <p>erm, what the sigma</p>
+
         </>
     )
 }

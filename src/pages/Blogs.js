@@ -5,7 +5,7 @@ import React, { StrictMode, useState } from 'react';
 import foldericon from "./directory_closed-4.png";
 
 import CPILocatorPt1 from "./BlogPosts/CPILocatorPt1";
-
+import ReactQuickstart from "./BlogPosts/ReactQuickstart";
 
 const ContentWindow = ({title, openedFileIndex, setOpenedFileIndex, children}) => {
   if (openedFileIndex.current !== 0)
@@ -46,11 +46,15 @@ const FileExplorer = ({setOpenedFileIndex}) => {
           </thead>
           <tbody>
             <tr>
-              <td onClick={() => setOpenedFileIndex(2)}>Using Deep Learning to Locate CPIs</td>
+              <td onClick={() => setOpenedFileIndex(2)}>React Quickstart</td>
+              <td>8/25/2024</td>
+            </tr>
+            <tr>
+              <td onClick={() => setOpenedFileIndex(3)}>Using Deep Learning to Locate CPIs</td>
               <td>8/23/2024</td>
             </tr>
             <tr>
-              <td onClick={() => setOpenedFileIndex(3)}>Docker </td>
+              <td onClick={() => setOpenedFileIndex(4)}>Docker </td>
               <td>8/24/2024</td>
             </tr>
           </tbody>
@@ -62,10 +66,10 @@ const FileExplorer = ({setOpenedFileIndex}) => {
 
 const FileDirectory = ({index, setOpenedFileIndex}) => {
   return [
-    null, 
+    null,
     <FileExplorer setOpenedFileIndex={setOpenedFileIndex}/>,
+    <ReactQuickstart/>,
     <CPILocatorPt1/>,
-
   ][index.current]
 }
 
