@@ -101,15 +101,22 @@ p {
     text-align: left;
 }
 
-.ProjectCard-container {
+.ProjectCard-grid-container {
+    display: flex;
+    width: 100%;
+}
+
+.ProjectCard-grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    column-gap: 5px;
-    row-gap: 5px;
+    column-gap: 10px;
+    row-gap: 10px;
+    width: 100%;
+    /* Need to fix off center grid. Try increasing grid gaps to see problem */
 }
 
 @media (orientation: portrait){
-    .ProjectCard-container {
+    .ProjectCard-grid {
         grid-template-columns: 100%;
     }
 }

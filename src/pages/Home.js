@@ -61,34 +61,42 @@ const Home = () => {
             </div>
             <div className='Projects-banner-small color-B'></div>
             <div className='Projects-banner-small color-C'></div>
-            <body className='Projects-body'>
-                <h1>Projects</h1>
-                <p>Projects I’ve made in the past years, including this website, some deep learning, and windows applications</p>
-                <div className='ProjectCard-container'>
-                    <ProjectCard
-                        title="This Website!"
-                        year="2024"
-                        description="Learned to use React, RouterDOM, and Hooks."
-                        source_link="https://github.com/ldoughty05/PersonalWebsite"
-                    />
-                    <ProjectCard
-                        title="Character Classifier"
-                        year="2024"
-                        description="Deep learning MNIST classifier with a GUI so you can try it with your own handwriting."
-                        source_link="https://github.com/ldoughty05/character_classifier"
-                    />
-                    <ProjectCard
-                        title="Deep Learning Basics"
-                        year='2023'
-                        description="Text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
-                        source_link={'https://github.com/ldoughty05/Deep-Learning'}
-                    />
-                    <ProjectCard
-                        title='Boid Simulator'
-                        year='2023'
-                        description='Simulates the flocking behavior of birds in 2d space.'
-                        source_link={'https://github.com/ldoughty05/boidSim'}
-                    />
+                <body className='Projects-body'>
+                    <h1>Projects</h1>
+                    <p>Projects I’ve made in the past years, including this website, some deep learning, and windows applications</p>
+                    <div className='ProjectCard-grid-container'>
+                    <div className='ProjectCard-grid'>
+                        <ProjectCard
+                            title="This Website!"
+                            year="2024"
+                            description="Learned to use React, RouterDOM, and Hooks."
+                            source_link="https://github.com/ldoughty05/PersonalWebsite"
+                        />
+                        <ProjectCard
+                            title="CPI Locator"
+                            year="2024"
+                            description="U-Net Deep Learning Model using Google Earth Engine and Vertex Ai Platform to segment central pivot 
+                                irrigators from satellite imagery "
+                        />
+                        <ProjectCard
+                            title="Character Classifier"
+                            year="2024"
+                            description="Deep learning MNIST classifier with a GUI so you can try it with your own handwriting."
+                            source_link="https://github.com/ldoughty05/character_classifier"
+                        />
+                        <ProjectCard
+                            title="Deep Learning Basics"
+                            year='2023'
+                            description="Text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
+                            source_link={'https://github.com/ldoughty05/Deep-Learning'}
+                        />
+                        <ProjectCard
+                            title='Boid Simulator'
+                            year='2023'
+                            description='Simulates the flocking behavior of birds in 2d space.'
+                            source_link={'https://github.com/ldoughty05/boidSim'}
+                        />
+                    </div>
                 </div>
             </body>
         </div>

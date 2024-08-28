@@ -5,8 +5,17 @@ import React, { StrictMode, useState, useEffect, useMemo } from 'react';
 
 import foldericon from "./directory_closed-4.png";
 
-import CPILocatorPt1 from "./BlogPosts/CPILocatorPt1";
+import CPILocatorSummer from "./BlogPosts/CPILocatorSummer";
 import ReactQuickstart from "./BlogPosts/ReactQuickstart";
+import ReactBasics from "./BlogPosts/ReactBasics";
+import SetupGitLinux from "./BlogPosts/SetupGitLinux"
+
+const articles = {
+  "React Quickstart": <ReactQuickstart/>, // 8/25/2024
+  "CPI Locator Summer Work Overview": <CPILocatorSummer/>,
+  "React Basics": <ReactBasics/>,// 8/26/2024
+  "Setup Git on Linux": <SetupGitLinux/>,// 8/26/2024
+}
 
 export const useMediaQuery = (query) => {
   const mediaQuery = useMemo(() => window.matchMedia(query), [query]);
@@ -50,7 +59,7 @@ const ContentWindow = ({openedFileName, setOpenedFileName, children}) => {
           <div className="ContentWindow-page-container">
             <div className="ContentWindow-page">
               <div className="ContentWindow-page-content">
-                <FileDirectory openedFileName={openedFileName} setOpenedFileName={setOpenedFileName}/>
+                <FileDirectory articles={articles} openedFileName={openedFileName} setOpenedFileName={setOpenedFileName}/>
               </div>
             </div>
           </div>
@@ -60,7 +69,17 @@ const ContentWindow = ({openedFileName, setOpenedFileName, children}) => {
   return null
 }
 
-const FileExplorer = ({setOpenedFileName}) => {
+const FileExplorer = ({fileNames, setOpenedFileName}) => {
+  let linksArr = [fileNames.length];
+  for (let i = 0; i < fileNames.length; i++){
+    linksArr[i] = (
+    <tr>
+      <td onClick={() => setOpenedFileName(fileNames[i])}>{fileNames[i]}</td>
+      <td>m/dd/yyyy</td>
+    </tr>
+    )
+  }
+
   return (
     <StrictMode>
       <div className="FileExplorer" >
@@ -72,18 +91,7 @@ const FileExplorer = ({setOpenedFileName}) => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td onClick={() => setOpenedFileName("React Quickstart")}>React Quickstart</td>
-              <td>8/25/2024</td>
-            </tr>
-            <tr>
-              <td onClick={() => setOpenedFileName("CPI Locator Overview Pt1")}>Using Deep Learning to Locate CPIs</td>
-              <td>8/23/2024</td>
-            </tr>
-            <tr>
-              <td onClick={() => setOpenedFileName("Docker")}>Docker </td>
-              <td>8/24/2024</td>
-            </tr>
+            {linksArr}
           </tbody>
         </table>
       </div>
@@ -91,14 +99,12 @@ const FileExplorer = ({setOpenedFileName}) => {
   )
 }
 
-const FileDirectory = ({openedFileName, setOpenedFileName}) => {
+const FileDirectory = ({articles, openedFileName, setOpenedFileName}) => {
   const fileDict = {
-    "File Explorer": <FileExplorer setOpenedFileName={setOpenedFileName}/>,
-    "React Quickstart": <ReactQuickstart/>,
-    "CPI Locator Overview Pt1": <CPILocatorPt1/>,
+    "File Explorer": <FileExplorer fileNames={Object.keys(articles)} setOpenedFileName={setOpenedFileName}/>,
+    ...articles
   }
-  console.log(openedFileName)
-  return fileDict[openedFileName.current] || null;
+  return fileDict[openedFileName.current];
 }
 
 const Blogs = () => {
