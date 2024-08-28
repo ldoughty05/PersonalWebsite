@@ -119,7 +119,6 @@ const PageText = ({ setFocusIndex }) => {
       <div className='AboutMe-body-page'>
         <DummyElement callbackFn={() => setFocusIndex(1)}/>
         <p>
-          <h1> Work Experience and Involvement</h1> {/* TODO: Not supposed to keep extra stuff in my p's. Fix this later*/}
           <strong>Huskertech, IT Assistant</strong>, Lincoln, NE 	<i>January 2024 – Present</i> <br/>
           •	Providing technical support to students and faculty/staff by email, phone, support tickets, or in person.<br/>
           •	Troubleshooting problems with software, operating systems, computer hardware, and network connections.<br/>
