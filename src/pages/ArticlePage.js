@@ -30,45 +30,44 @@ export const useMediaQuery = (query) => {
   return match;
 }
 
-const FileDirectory = ({openedFileKey, setOpenedFileKey}) => {
+const FileDirectory = ({openedFileKey}) => {
   const fileDict = new Map();
   fileDict.set("FileExplorer", {title:"File Explorer", 
-    component: <FileExplorer fileKeys={[...articles.keys()]} setOpenedFileKey={setOpenedFileKey}/>});
+    component: <FileExplorer articlesInfo={articles}/>});
     //articles.keys() returns a MapIterator
   articles.forEach((value, key, _) => fileDict.set(key, value)); //Add all of articles Map to fileDict
 
-  return fileDict.get(openedFileKey.current).component;
+  return fileDict.get(openedFileKey).component;
 }
 
 
-const TaskbarButtons = ({openedFileKey, setOpenedFileKey}) => {
+const TaskbarButtons = ({setOpenedFileKey}) => {
   const desktop = useMediaQuery("(min-width: 680px)");
   if (desktop) 
     return (
     <>
-      <button onClick={() => setOpenedFileKey("FileExplorer")}>Explorer</button>
-      <button onClick={() => setOpenedFileKey(openedFileKey.previous)}>Back</button>
-      <button onClick={() => setOpenedFileKey("")}>X</button>
+      <Link to="/articles/FileExplorer"><button>Explorer</button></Link>
+      <Link to="/articles"><button>X</button></Link>
     </>
   )
   return null
 }
 
-const ContentWindow = ({openedFileKey, setOpenedFileKey, children}) => {
-  if (openedFileKey.current !== "")
+const ContentWindow = ({openedFileKey}) => {
+  if (openedFileKey !== "")
     return (
       <StrictMode>
         <div className="ContentWindow">
           <div className="ContentWindow-top-bar">
-            <h3 className="window-name">{openedFileKey.current}</h3>
+            <h3 className="window-name">{openedFileKey}</h3>
             <div className="button-shelf">
-              <TaskbarButtons openedFileKey={openedFileKey} setOpenedFileKey={setOpenedFileKey}/>
+              <TaskbarButtons/>
             </div>
           </div>
           <div className="ContentWindow-page-container">
             <div className="ContentWindow-page">
               <div className="ContentWindow-page-content">
-                <FileDirectory openedFileKey={openedFileKey} setOpenedFileKey={setOpenedFileKey}/>
+                <FileDirectory openedFileKey={openedFileKey}/>
               </div>
             </div>
           </div>
@@ -78,23 +77,33 @@ const ContentWindow = ({openedFileKey, setOpenedFileKey, children}) => {
   return null
 }
 
-const FileExplorer = ({fileKeys, setOpenedFileKey}) => {
-  let linksArr = [fileKeys.length];
-  for (let i = 0; i < fileKeys.length; i++){
-    linksArr[i] = (
-    <tr>
-      <td onClick={() => setOpenedFileKey(fileKeys[i])}>{fileKeys[i]}</td>
-      <td>m/dd/yyyy</td>
-    </tr>
-    )
-  }
+const FileExplorer = ({articlesInfo}) => {
+  const articlesArr = [...articlesInfo];
+  let linksArr = [articlesInfo.length];
+  articlesInfo.forEach((val, key, _) => linksArr.push(
+      <tr key={key}>
+          <td><Link to={`/articles/${key}`}>{val.title}</Link></td>
+        
+          <td>{val.date}</td>
+      </tr>
 
+  ));
+  // for (let i = 0; i < fileKeys.length; i++){
+  //   linksArr[i] = (
+  //   <tr>
+  //     <td>
+  //       <Link to={`/articles/${articlesArr[i].key}`}></Link>
+  //     </td>
+  //     <td>m/dd/yyyy</td>
+  //   </tr>
+  //   )
+  //}
   return (
     <StrictMode>
       <div className="FileExplorer" >
         <table className="FileExplorer-table">
           <thead>
-            <tr>
+            <tr key={"table_header"}>
               <th>Title</th>
               <th>Publish Date</th>
             </tr>
@@ -110,25 +119,20 @@ const FileExplorer = ({fileKeys, setOpenedFileKey}) => {
 
 const ArticlePage = () => {
   const {articleId} = useParams();
-  console.log("articleId: ",articleId);
-  const startingPage = articleId || "FileExplorer"
-  const [openedFileKey, setOpenedFileKey] = useState({ current: startingPage, previous: startingPage });
-  const updateFileKey = (newKey) => {
-    setOpenedFileKey((prevState) => ({
-      current: newKey,
-      previous: prevState.current === "" ? prevState.previous : prevState.current /* (we dont want back to a closed window*/
-    }));
-  }
-
+  const currentArticle = articleId || ""
   return (
     <StrictMode>
       <div className="Blogs">
-        <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-desktop" onClick={() => updateFileKey("FileExplorer")}/>
-        <ContentWindow openedFileKey={openedFileKey} setOpenedFileKey={updateFileKey} />
+        {/* MAKE THIS A LINK */}
+        <Link to="/articles/FileExplorer">
+          <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-desktop"/>
+        </Link>
+        <ContentWindow openedFileKey={currentArticle}/>
         <div className="Blogs-taskbar">
           <Link to="/" className="Blogs-taskbar-home-button">Home</Link>
-          <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-taskbar" onClick={() => updateFileKey("FileExplorer")}/>
-
+          <Link to="/articles/FileExplorer">
+            <img src={foldericon} alt="[FILES]" className="Blogs-foldericon-taskbar"/>
+        </Link>
         </div>
       </div>
     </StrictMode>

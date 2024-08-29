@@ -36,10 +36,11 @@ const ProjectCard = ({title="", year="", description="", source_link=null, demo_
                     <a href={source_link} target='_blank' className='color-A Project-link' rel="noopener noreferrer">&gt; source</a>
                 </li>}
                 {demo_link && <li>
-                    <a href={source_link} target='_blank' className='color-B Project-link' rel="noopener noreferrer">&gt;  demo</a>
+                    <a href={source_link} target='_blank' className='color-B Project-link' rel="noopener noreferrer">&gt; demo</a>
                 </li>}
                 {article_link && <li>
-                    <a href={source_link} target='_blank' className='color-C Project-link' rel="noopener noreferrer">&gt; article</a>
+                    <Link to={article_link} className='color-C Project-link'>&gt; article</Link>
+                    {/* <a href={source_link} target='_blank' className='color-C Project-link' rel="noopener noreferrer">&gt; article</a> */}
                 </li>}
             </ul>
         </div>
@@ -52,7 +53,7 @@ const Home = () => {
             <img src={logo} className='Home-logo' alt='Luke Doughty' />
             <Link to="/aboutme" className='Home-links'>&gt; About Me</Link>
             <Link onClick={panDownOnClick} className='Home-links'>&gt; Projects</Link>
-            <Link to="/articles" className='Home-links'>&gt; Articles</Link>
+            <Link to="/articles/FileExplorer" className='Home-links'>&gt; Articles</Link>
         </header>
 
         <div className="Projects-page">
@@ -61,7 +62,7 @@ const Home = () => {
             </div>
             <div className='Projects-banner-small color-B'></div>
             <div className='Projects-banner-small color-C'></div>
-                <body className='Projects-body'>
+                <div className='Projects-body'>
                     <h1>Projects</h1>
                     <p>Projects I’ve made in the past years, including this website, some deep learning, and windows applications</p>
                     <div className='ProjectCard-grid-container'>
@@ -77,6 +78,7 @@ const Home = () => {
                             year="2024"
                             description="U-Net Deep Learning Model using Google Earth Engine and Vertex Ai Platform to segment central pivot 
                                 irrigators from satellite imagery "
+                            article_link="/articles/CPISummer"
                         />
                         <ProjectCard
                             title="Character Classifier"
@@ -88,17 +90,17 @@ const Home = () => {
                             title="Deep Learning Basics"
                             year='2023'
                             description="Text generation, sentiment analysis, and more. Following along with 'Deep Learning' by Andrew W. Trask."
-                            source_link={'https://github.com/ldoughty05/Deep-Learning'}
+                            source_link='https://github.com/ldoughty05/Deep-Learning'
                         />
                         <ProjectCard
                             title='Boid Simulator'
                             year='2023'
                             description='Simulates the flocking behavior of birds in 2d space.'
-                            source_link={'https://github.com/ldoughty05/boidSim'}
+                            source_link='https://github.com/ldoughty05/boidSim'
                         />
                     </div>
                 </div>
-            </body>
+            </div>
         </div>
     </div>
     );
