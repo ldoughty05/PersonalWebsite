@@ -52,9 +52,6 @@ const TopicCardGenerator = ({ focusCardIndex }) => {
 
 
 const TopicCard = ({id=0, label="", className=""}) => {
-    /* Maybe I could make this the shelf instead, and I imput an array of labels and it makes a card for each label 
-    and its easier to know how many card there are for my scrolling feature*/
-
   return (
     <div className={'TopicCard-container ' + className} >
       <div className='TopicCard-padding'>

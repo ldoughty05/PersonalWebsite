@@ -1,5 +1,4 @@
-import "./BlogPosts.css";
-
+import "./Articles.css"
 const CPILocatorSummer = () => {
     return (
         <div className="page">

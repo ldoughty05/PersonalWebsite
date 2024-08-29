@@ -52,7 +52,7 @@ const Home = () => {
             <img src={logo} className='Home-logo' alt='Luke Doughty' />
             <Link to="/aboutme" className='Home-links'>&gt; About Me</Link>
             <Link onClick={panDownOnClick} className='Home-links'>&gt; Projects</Link>
-            <Link to="/blogs" className='Home-links'>&gt; Blogs</Link>
+            <Link to="/articles" className='Home-links'>&gt; Articles</Link>
         </header>
 
         <div className="Projects-page">
