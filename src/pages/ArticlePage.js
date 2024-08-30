@@ -8,13 +8,15 @@ import foldericon from "./directory_closed-4.png";
 import CPILocatorSummer from "./Articles/CPILocatorSummer";
 import ReactQuickstart from "./Articles/ReactQuickstart";
 import ReactBasics from "./Articles/ReactBasics";
-import SetupGitLinux from "./Articles/SetupGitLinux"
+import SetupGitLinux from "./Articles/SetupGitLinux";
+import CBasics from "./Articles/CBasics";
 
 const articles = new Map();
 articles.set("ReactQuickstart", {title: "React Quickstart", component: <ReactQuickstart/>, date: "8/25/2024"});
 articles.set("CPISummer", {title: "CPI Locator Summer Work Overview", component: <CPILocatorSummer/>, date: "8/25/2024"});
 articles.set("ReactBasics", {title: "React Basics", component: <ReactBasics/>, date: "8/27/2024"});
 articles.set("GitLinux", {title: "Setup Git on Linux", component: <SetupGitLinux/>, date: "8/26/2024"});
+articles.set("CBasics", {title: "C Basics", component:<CBasics/>, date:"8/30/2024"} )
 
 export const useMediaQuery = (query) => {
   const mediaQuery = useMemo(() => window.matchMedia(query), [query]);
