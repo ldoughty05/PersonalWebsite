@@ -1,0 +1,54 @@
+.desktop{
+  overflow: hidden;
+  background-image: url("./CloudyWin98.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.folderIcon{
+  display: none;
+}
+
+.taskbar{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 100vw;
+  background-color: #c3c3c3;
+  border-style: outset;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+@media (orientation: landscape){
+  .taskbar{
+    margin-top: auto;
+  }
+
+  .folderIcon{
+    display: inline;
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    z-index: 1;
+  }
+}
+
+
+.taskbar .taskbarIcon{
+  margin-left: 20px;
+  margin-top: 3px;
+  height: 35px;
+}
+
+.taskbar .homeButton{
+  text-decoration: none;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  padding: 7px;
+  border-style: outset;
+}

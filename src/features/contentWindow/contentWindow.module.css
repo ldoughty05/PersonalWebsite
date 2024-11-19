@@ -1,0 +1,76 @@
+.contentWindow{
+  background-image: linear-gradient(to top right, blue 50%, lightgray);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+@media (min-width: 680px){
+  .contentWindow {
+      margin: 40px;
+  }
+}
+
+.contentWindow .topBar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contentWindow .topBar h3{
+  color: white;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.contentWindow .topBar button{
+  margin: 2px 2px 2px 0px;
+  border-radius: 0;
+  border-style: outset;
+  border-color: white;
+}
+
+.contentWindow .pageContainer{
+  height: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.contentWindow .pageContainer .page{
+  display: flex;
+  background-color: white;
+  height: 100%;
+}
+
+.contentWindow .pageContainer .page .content{
+  display: flex;
+  max-width: 900px;
+}
+
+.fileExplorer table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.fileExplorer table td, .fileExplorer table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.fileExplorer table tr:nth-child(even){background-color: #f2f2f2;}
+
+.fileExplorer table tr:hover {background-color: #ddd;}
+
+.fileExplorer table th {
+  padding: 0px 12px;
+  background-color: gray;
+}
+
+.fileExplorer table tr Link {
+  width: 100vw;
+}
