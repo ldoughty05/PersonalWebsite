@@ -1,9 +1,17 @@
 export const projects = [
   {
+    title: 'Knapsack Optimizer',
+    year: '2024',
+    skills: ['Dynamic Programming', 'React', 'Redux', 'Javascript'],
+    description: 'Assign a tastiness score to candies from a storefront. Optimizer tells you which candies to buy to maximize total tastiness.',
+    demo_link: 'https://candy.lukedoughty.me/'
+  },
+  {
     title: 'Yet-To-Be-Named Music Platform',
     year: '2024',
     skills: ['React', 'Redux', 'Javascript', ],
-    description: 'All of your music in one place. Combine your Apple Music, Spotify, Soundclous and local music files in one library.'
+    description: 'All of your music in one place. Combine your Apple Music, Spotify, Soundclous and local music files in one library.',
+    demo_link: 'https://musicplayer.lukedoughty.me/'
   },
   {
     title: 'This Website!',

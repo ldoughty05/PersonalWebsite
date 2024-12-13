@@ -5,11 +5,10 @@ import foldericon from "./directory_closed-4.png";
 export function Desktop64(props){
   return (
     <div className={styles.desktop}>
-      {/* MAKE THIS A LINK */}
+      {props.children}
       <Link to="/articles/FileExplorer">
         <img src={foldericon} alt="[FILES]" className={styles.folderIcon}/>
       </Link>
-      {props.children}
       <div className={styles.taskbar}>
         <Link to="/" className={styles.homeButton}>Home</Link>
         <Link to="/articles/FileExplorer">
