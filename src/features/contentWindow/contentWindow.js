@@ -9,6 +9,7 @@ const articles = [
   {title: "Setup Git on Linux", suburl: 'setupgitonlinux', date: "8/26/2024"},
   {title: "C Basics", suburl: 'cbasics', date:"8/30/2024"},
   {title: "Vim & Bash Cheat Sheet", suburl: 'vimcheatsheet', date:"9/25/2024"},
+  {title: "SOFT260 Condensed Notes", suburl: 'soft260notes', date:"12/13/2024"},
 ]
 const useMediaQuery = (query) => {
   const mediaQuery = useMemo(() => window.matchMedia(query), [query]);

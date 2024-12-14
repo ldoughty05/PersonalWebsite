@@ -12,28 +12,52 @@ ProjectCard.propTypes = {
   source_link: PropTypes.string,
   demo_link: PropTypes.string,
   article_link: PropTypes.string, 
+  isImportant: PropTypes.bool,
 }
 function ProjectCard(props){
+  const cardStyleClasses = props.isImportant ? `${styles.card} ${styles.important}` : `${styles.card}`;
   return (
-      <div className={styles.card}>
+      <div className={cardStyleClasses}>
           <h3>{props.year}</h3>
           <h2>{props.title}</h2>
           <h4>{props.description}</h4>
           <ul className={styles.linkShelf}>
               {props.source_link && <li>
                   <a href={props.source_link}
-                    style={{backgroundColor: 'var(--important-red)'}}
+                    style={{backgroundColor: 'var(--important-A-light)',
+                            color: 'var(--important-A-dark)'
+                    }}
                     target='_blank' rel="noopener noreferrer">&gt; source</a>
               </li>}
               {props.demo_link && <li>
                   <a href={props.demo_link}
-                    style={{backgroundColor: 'var(--important-orange)'}}
-                    rel="noopener noreferrer">&gt; demo</a>
+                      style={{backgroundColor: 'var(--important-B-light)',
+                              color: 'var(--important-B-dark)'
+                      }}
+                      rel="noopener noreferrer">&gt; demo</a>
               </li>}
               {props.article_link && <li>
-                  <Link to={props.article_link}
-                    style={{backgroundColor: 'var(--important-yellow)'}}
-                  >&gt; article</Link>
+                {
+                  props.article_link.startsWith('/') ?
+                  (
+                    // For static files in 'public' directory.
+                    <a href={props.article_link}
+                      style={{backgroundColor: 'var(--important-C-light)',
+                              color: 'var(--important-C-dark)'
+                      }}
+                      target='_blank' rel="noopener noreferrer">&gt; article
+                    </a>
+                  ) : (
+                    // For dynamic routes to an something in 'articles'.
+                    <Link to={props.article_link}
+                      style={{backgroundColor: 'var(--important-C-light)',
+                              color: 'var(--important-C-dark)'
+                      }}
+                      >&gt; article
+                    </Link>
+                  )
+                }
+
               </li>}
           </ul>
       </div>
@@ -45,7 +69,6 @@ export function Projects(){
     <div className={styles.projects}>
       <h1>Projects</h1>
       <div className={styles.grid}>
-        
         { 
           projects.map((project) =>
             <ProjectCard
@@ -55,6 +78,7 @@ export function Projects(){
               source_link={project.source_link}
               demo_link={project.demo_link}
               article_link={project.article_link}
+              isImportant={project.isImportant}
               key={project.title}
             />
           )

@@ -1,10 +1,10 @@
 import styles from './home.module.css';
-import logo from '../../LukeDoughty-Yeezuz.png';
-import uparrow from './up-arrow.png'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
 export function Home() {
+  const UP_ARROW = '/media/up-arrow.png';
+  const LOGO = '/media/LukeDoughty-Yeezuz.png';
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
@@ -15,7 +15,7 @@ export function Home() {
   return (
     <div className={styles.home}>
       <div className={styles.header}>
-        <img src={logo} className={styles.logo} alt='Luke Doughty' />
+        <img src={LOGO} className={styles.logo} alt='Luke Doughty' />
         <h2>Embedded Systems • Web Dev • AI/ML </h2>
         <hr />
       </div>
@@ -26,10 +26,10 @@ export function Home() {
       </div>
       <div className={styles.banners}>
         <div className={styles.largeBanner} style={{backgroundColor: 'var(--background-bold'}}>
-            {isScrolled && <img src={uparrow} onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}
+            {isScrolled && <img src={UP_ARROW} onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}
         </div>
-        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-orange'}}></div>
-        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-yellow'}}></div>
+        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-B)'}}></div>
+        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-C)'}}></div>
       </div>
     </div>
   );

@@ -2,10 +2,30 @@
   margin: 0 10%;
 }
 
-.grid {
-  display: grid;
-  gap: 50px 10px;
+.projects .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  gap: 50px 25px;
   padding-bottom: 200px;
+}
+
+.projects .grid .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--card-color);
+  border-radius: 20px;
+  text-align: left;
+  padding: 15px;
+  font-size: x-large;
+  
+}
+
+.projects .grid .card.important {
+  border: 5px solid var(--important-A);
+  /* background-color: var(--important-A-light); */
+  width: 100%;
 }
 
 @media (orientation: landscape){
@@ -13,17 +33,11 @@
     margin: 0 25%;
   }
 
-  .grid{
-    grid-template-columns: repeat(2, 1fr);
-
+  .projects .grid .card {
+    width: calc(50% - 50px);
+    /* I should instead check if im not on a mobile device, but whatever */
+    box-shadow: 5px 5px 5px gray;
   }
-}
-
-.card {
-  background-color: var(--card-color);
-  border-radius: 20px;
-  text-align: left;
-  padding: 15px;
 }
 
 .linkShelf {
@@ -49,7 +63,7 @@
 
 .card h3 {
   margin-top: 0;
-  color: var(--important-red);
+  color: var(--important-A);
   font-size: 1.0em;
 }
 

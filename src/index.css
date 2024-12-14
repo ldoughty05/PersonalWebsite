@@ -3,9 +3,15 @@
   --font-color: rgba(240 240 255 / 100%);
   --background-bold: #F64822;
   --background-dull: #ffffff;
-  --important-red: #F64822;
-  --important-orange: #F6A122;
-  --important-yellow:#F6E122;
+  --important-A-dark: #c93412;
+  --important-A: #F64822;
+  --important-A-light: #ffbfb0;
+  --important-B-dark: #dc890d;
+  --important-B: #F6A122;
+  --important-B-light: #ffd89f;
+  --important-C-dark:#a89700;
+  --important-C:#ffeb33;
+  --important-C-light:#fff599;
   --card-color: #f2ecec; 
 }
 

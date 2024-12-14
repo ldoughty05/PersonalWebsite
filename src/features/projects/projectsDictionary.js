@@ -1,17 +1,35 @@
 export const projects = [
   {
+    title: 'Embedded Combo Lock',
+    year: '2024',
+    skills: ['Embedded Systems', 'C', 'Interrupts', 'Memory Mapped I/O', 'Raspberry Pi', 'State Machines', 'Team'],
+    description: 'Combination Lock with a rotary encoder, a servomotor and raspberry pi pico. Users can reset the combination with a numeric keypad.',
+    source_link: 'https://github.com/Minimac21/combolocklab',
+    isImportant: true,
+  },
+  {
+    title: 'Hashing with Trading Cards',
+    year: '2024',
+    skills: ['Hashing','JSON', 'React', 'Redux', 'Javascript'],
+    description: 'Manage your trading cards. Add and remove cards. Search engine built with a hash map.',
+    demo_link: 'http://tradingcards.lukedoughty.me/',
+
+  },
+  {
     title: 'Knapsack Optimizer',
     year: '2024',
     skills: ['Dynamic Programming', 'React', 'Redux', 'Javascript'],
     description: 'Assign a tastiness score to candies from a storefront. Optimizer tells you which candies to buy to maximize total tastiness.',
-    demo_link: 'https://candy.lukedoughty.me/'
+    demo_link: 'https://candy.lukedoughty.me/',
   },
   {
     title: 'Yet-To-Be-Named Music Platform',
     year: '2024',
-    skills: ['React', 'Redux', 'Javascript', ],
+    skills: ['UX User Testing', 'React', 'Redux', 'Javascript', 'Team'],
     description: 'All of your music in one place. Combine your Apple Music, Spotify, Soundclous and local music files in one library.',
-    demo_link: 'https://musicplayer.lukedoughty.me/'
+    demo_link: 'https://musicplayer.lukedoughty.me/',
+    article_link: '/pdfs/Team_3_Final_Report.pdf',
+    isImportant: true,
   },
   {
     title: 'This Website!',
@@ -25,11 +43,12 @@ export const projects = [
     skills: ['Tensorflow', 'Keras', 'Javascript', 'Parallel Programming', 'Apache Beam', 'Google Cloud', 'REST APIs'],
     description: 'Deep Learning Model using Google Earth Engine and Vertex Ai Platform to segment central pivot irrigators from satellite imagery',
     article_link: "/articles/CPISummer",
+    isImportant: true,
   },
   {
     title: 'NEBP Datalogger',
     year: '2024',
-    skills: ['C++', 'Arduino'],
+    skills: ['C++', 'Arduino', 'Teensy4.1'],
     description: 'Log readings from various sensors connected to a Teensy 4.1 as part of the NASA National Eclipse Balloning Project.',
   },
   {
@@ -42,8 +61,9 @@ export const projects = [
     title: 'Character Classifier',
     year: '2024',
     skills: ['Python', 'Tensorflow'],
-    description: 'Deep learning MNIST classifier with a GUI so you can try it with your own handwriting.',
+    description: 'Deep learning CNN MNIST classifier with a GUI so you can try it with your own handwriting.',
     source_link: 'https://github.com/ldoughty05/character_classifier',
+    article_link: '/pdfs/MNIST_Report.pdf',
   },
   {
     title: 'Deep Learning Basics',
