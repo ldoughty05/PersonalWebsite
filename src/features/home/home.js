@@ -1,9 +1,30 @@
 import styles from './home.module.css';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
+function LinksBanner() {
+  return (
+    <div className={styles.linksBanner}>
+      <div className={styles.outerBorder}>
+        <div className={styles.innerBorder}>
+          <div className={styles.content}>
+            <a href="https://www.linkedin.com/in/lukedoughty/">
+              <FontAwesomeIcon icon={faLinkedin} size="5x"/>
+            </a>
+            <a href="https://github.com/ldoughty05">
+              <FontAwesomeIcon icon={faGithub} size="5x"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function Home() {
-  const UP_ARROW = '/media/up-arrow.png';
   const LOGO = '/media/LukeDoughty-Yeezuz.png';
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -21,12 +42,14 @@ export function Home() {
       </div>
       <div className={styles.links}>
         {/* <Link to="/aboutme">&gt; About Me</Link> */}
-        <Link onClick={panDownOnClick}>&gt; Projects</Link>
+        <button onClick={panDownOnClick}>&gt; Projects</button>
+        <a href='https://lukedoughty.me/pdfs/Term_4_Resume_Entrepreneur.pdf'>&gt; Resume</a>
         <Link to="/articles/FileExplorer">&gt; Articles</Link>
       </div>
+      <LinksBanner />
       <div className={styles.banners}>
         <div className={styles.largeBanner} style={{backgroundColor: 'var(--background-bold'}}>
-            {isScrolled && <img src={UP_ARROW} onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}
+            {isScrolled && <FontAwesomeIcon icon={faAngleUp} size="2x" onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}
         </div>
         <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-B)'}}></div>
         <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-C)'}}></div>

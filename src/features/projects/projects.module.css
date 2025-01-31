@@ -18,8 +18,7 @@
   border-radius: 20px;
   text-align: left;
   padding: 15px;
-  font-size: x-large;
-  
+  font-size: larger;
 }
 
 .projects .grid .card.important {
@@ -71,7 +70,3 @@
   margin-top: 0;
 }
 
-.card h4 {
-  font-size: 0.75em;
-  font-weight: normal;
-}

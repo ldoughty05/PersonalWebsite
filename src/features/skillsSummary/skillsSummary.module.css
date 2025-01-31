@@ -1,0 +1,44 @@
+.skillsSummary {
+  margin: 10px 5% 0 5%;
+}
+
+.skillsSummary .toggle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 15px;
+  border-style: none;
+  background-color: var(--card-color);
+}
+
+.skillsSummary .content {
+  border: 2px solid;
+  padding: 15px;
+  background-color: var(--card-color);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-style: none;
+  border-radius: 15px;
+  /* Make it flush with rounded toggle button */
+  /* border-top: 0; */
+  margin-top: -22px;
+  padding-top: 20px;
+
+}
+
+@media (orientation: landscape){
+  .skillsSummary {
+    margin-left: 25%;
+    margin-right: 25%;
+    box-shadow: 5px 5px 5px gray;
+  }
+}
+
+.skillsSummary .content p {
+  margin: 0;
+}

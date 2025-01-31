@@ -5,10 +5,43 @@ import { Link } from "react-router-dom";
 
 import { projects } from './projectsDictionary';
 
+LinkButton.propTypes = {
+  link: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  textColor: PropTypes.string.isRequired,
+}
+function LinkButton(props)
+{
+  if (props.link.substring(0, 4) === "http"){
+    return (
+      <a 
+        href={props.link}
+        style={{backgroundColor: props.backgroundColor, color: props.textColor}}
+        target='_blank' 
+        rel="noopener noreferrer"
+      >
+      {props.label}
+      </a>
+    );
+  } else {
+    return (
+      <Link
+        to={props.link}
+        style={{backgroundColor: props.backgroundColor, color: props.textColor}}
+      >
+      {props.label}
+      </Link>
+    );
+  }
+}
+
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   year: PropTypes.string.isRequired,
+  skills: PropTypes.array,
   description: PropTypes.string,
+  bullet_points: PropTypes.arrayOf(PropTypes.string),
   source_link: PropTypes.string,
   demo_link: PropTypes.string,
   article_link: PropTypes.string, 
@@ -16,51 +49,53 @@ ProjectCard.propTypes = {
 }
 function ProjectCard(props){
   const cardStyleClasses = props.isImportant ? `${styles.card} ${styles.important}` : `${styles.card}`;
-  return (
-      <div className={cardStyleClasses}>
-          <h3>{props.year}</h3>
-          <h2>{props.title}</h2>
-          <h4>{props.description}</h4>
-          <ul className={styles.linkShelf}>
-              {props.source_link && <li>
-                  <a href={props.source_link}
-                    style={{backgroundColor: 'var(--important-A-light)',
-                            color: 'var(--important-A-dark)'
-                    }}
-                    target='_blank' rel="noopener noreferrer">&gt; source</a>
-              </li>}
-              {props.demo_link && <li>
-                  <a href={props.demo_link}
-                      style={{backgroundColor: 'var(--important-B-light)',
-                              color: 'var(--important-B-dark)'
-                      }}
-                      rel="noopener noreferrer">&gt; demo</a>
-              </li>}
-              {props.article_link && <li>
-                {
-                  props.article_link.startsWith('/') ?
-                  (
-                    // For static files in 'public' directory.
-                    <a href={props.article_link}
-                      style={{backgroundColor: 'var(--important-C-light)',
-                              color: 'var(--important-C-dark)'
-                      }}
-                      target='_blank' rel="noopener noreferrer">&gt; article
-                    </a>
-                  ) : (
-                    // For dynamic routes to an something in 'articles'.
-                    <Link to={props.article_link}
-                      style={{backgroundColor: 'var(--important-C-light)',
-                              color: 'var(--important-C-dark)'
-                      }}
-                      >&gt; article
-                    </Link>
-                  )
-                }
+  let skills = "";
+  for (let i = 0; i < props.skills.length; i++){
+    if (i > 0){
+      skills += ' ◦ '
+    }
+    skills += props.skills[i];
 
-              </li>}
-          </ul>
-      </div>
+  }
+  let bullet_points;
+  if (props.bullet_points){
+    bullet_points = props.bullet_points.map((bullet, i) =>
+      <li key={i}>{bullet}</li>);
+  }
+  return (
+    <div className={cardStyleClasses}>
+      <h3>{props.year}</h3>
+      <h2>{props.title}</h2>
+      {props.description && !props.bullet_points && (<p>{props.description}</p>)}
+      <ul>{bullet_points && bullet_points}</ul>
+      <p><i>{skills}</i></p>
+      <ul className={styles.linkShelf}>
+        <li>
+          {props.source_link && <LinkButton
+            link={props.source_link}
+            label='&gt; source'
+            backgroundColor='var(--important-A-light)'
+            textColor='var(--important-A-dark)'
+          />}
+        </li>
+        <li>
+          {props.demo_link && <LinkButton
+            link={props.demo_link}
+            label='&gt; demo'
+            backgroundColor='var(--important-B-light)'
+            textColor='var(--important-B-dark)'
+          />}
+        </li>
+        <li>
+          {props.article_link && <LinkButton
+            link={props.article_link}
+            label='&gt; article'
+            backgroundColor='var(--important-C-light)'
+            textColor='var(--important-C-dark)'
+          />}
+        </li>
+      </ul>
+    </div>
   )
 }
 
@@ -74,7 +109,9 @@ export function Projects(){
             <ProjectCard
               title={project.title}
               year={project.year}
+              skills={project.skills}
               description={project.description}
+              bullet_points={project.bullet_points}
               source_link={project.source_link}
               demo_link={project.demo_link}
               article_link={project.article_link}

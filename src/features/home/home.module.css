@@ -23,32 +23,37 @@
   width: 60%;
 }
 
-.links {
+.home .links {
   display: flex;
   flex-direction: column;
   text-align: left;
   margin: 0 20%;
 }
+.home a, .home button {
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  border-style: none;
+  background-color: transparent;
+  text-align: left;
+}
 
-.home a {
+.home .links a, .home .links button {
   color: white;
   font-family: "Source Code Pro", Monospace, "Lucida Console";
   font-size: larger;
   text-decoration: none;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   padding: 20px;
-  border-radius: 15px;
 }
 
-.home a:hover {
+.home a:hover, .home button:hover {
   background-color: #ffffff47;
 }
 
 .uparrow {
-  height: 25px;
-  padding: 10px 20vh 10px 20vh;
-  filter: invert(100%)
-  /* pointer-events: none; */
+  padding-top: 10px;
+  color: var(--font-color);
 }
 
 .smallBanner, .largeBanner{
@@ -61,4 +66,44 @@
 
 .largeBanner{
   height: 50px;
+}
+
+.linksBanner{
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: hidden;
+  /* border: 3px solid var(--important-C); */
+}
+
+.linksBanner .outerBorder {
+  /* border: 2px solid var(--important-B); */
+  border-left: 15px solid var(--important-C);
+  border-right: 0;
+  margin-right: -20px; 
+  margin-left: 50px;
+
+  width: 100%;
+  max-width: 500px;
+  background-color: #4658d0;
+  color: var(--font-color);
+  transform: skew(-20deg);
+
+}
+
+.linksBanner .innerBorder {
+  /* border: 2px solid var(--important-B); */
+  border-left: 10px solid var(--important-B);
+}
+
+.linksBanner .content {
+  display: flex;
+  padding-left: 40px;
+  gap: 25px;
+  transform: skew(20deg);
+
+}
+
+.linksBanner .content a {
+  margin: 0;
+  padding: 5px;
 }
