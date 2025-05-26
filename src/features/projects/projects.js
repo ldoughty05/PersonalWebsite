@@ -103,6 +103,12 @@ export function Projects(){
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>
+      <p>
+        Note: Many projects do not include source links due to university academic 
+        integrity policy restrictions. I'm happy to share source code upon request.
+        <br />
+        If you are interested in a project, please reach out to me via luke.doughty@me.com.
+      </p>
       <div className={styles.grid}>
         { 
           projects.map((project) =>

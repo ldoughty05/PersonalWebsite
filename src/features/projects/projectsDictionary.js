@@ -1,11 +1,142 @@
 export const projects = [
+
   {
-    title: 'Web Server with RESTful API',
+    title: 'High Altitude Balloon Payload Development & Test Flight',
+    year: '2025',
+    skills: ['C', 'Arduino', 'Teensy4.1', 'Teamwork', 'Embedded Systems', 'Aerospace'],
+    bullet_points: [
+      "Stepping stone for the High Altitude Student Platform (HASP) project",
+      "Tested and validated solar cell mounting and wiring",
+      "Proved the reliablility of microcontroller code and data logging"
+    ],
+    job_categories: {
+      'embedded': 4,
+    },
+    isImportant: false,
+    demo_link: 'https://www.youtube.com/watch?v=nNtrG-YNFuc',
+    article_link: 'https://lukedoughty.me/pdfs/EmbeddedHABHonorsReport_Doughty.pdf',
+    source_link: 'https://github.com/ldoughty05/HASP',
+  },
+  {
+    title: 'Sleeping Barber Problem Simulation',
+    year: '2025',
+    skills: ['C', 'Linux', 'Pthreads', 'Mutexes', 'Semaphores', 'Monitors', 'Synchronization', 'Operating Systems'],
+    bullet_points: [
+      "Solution to a classic synchronization problem using semaphores and a monitor",
+      "Implemented using process forking and pthreads",
+      "Simulates a barber shop with multiple barbers and customers, each with their own threads",
+    ],
+    job_categories: {
+      'networking': 4,
+      'cybersecurity': 2,
+      'web_backend': 1,
+      'embedded': 1,
+      'ai': 1,
+    },
+    isImportant: false,
+    demo_link: 'https://youtu.be/QpPo_ZFVBw8',
+    article_link: 'https://lukedoughty.me/pdfs/Article_BarberShop.pdf',
+  },
+  {
+    title: 'Zulip Open Source Contributions with Agile Team',
+    year: '2025',
+    skills: ['Python', 'JavaScript', 'Django', 'Agile', 'Git', 'Teamwork', 'Rest APIs', 'PostgreSQL'],
+    bullet_points: [
+      "Implemented a 'bookmark topics' feature and improved the 'archive topics' feature",
+      "Prioritized tasks using user and developer stories",
+      "Kept stakeholders informed with weekly status meetings",
+      "Communicated new features to a varied audience of developers and non-developers",
+    ],
+    job_categories: {
+      'web_backend': 4,
+      'web_frontend': 3,
+      'networking': 1,
+      'entrepreneurship': 4,
+    },
+    isImportant: true,
+    demo_link: 'https://www.youtube.com/watch?v=jqLdCOmvmSw',
+    article_link: 'https://lukedoughty.me/pdfs/Zulip_Release_Presentation_M2T7.pdf',
+  },
+  {
+    title: 'Remote Shell Using Socket Programming',
+    year: '2025',
+    skills: ['C', 'Sockets', 'Pipes', 'Linux', 'Networking', 'Synchronization', 'Operating Systems'],
+    bullet_points: [
+      "Enter a command on the client process and have it executed on the server process with the output returned to the client",
+      "Implemented using process forking, sockets, and pipes",
+      "Server can handle multiple clients at once",
+    ],
+    job_categories: {
+      'networking': 5,
+      'web_backend': 1,
+      'embedded': 1,
+    },
+    isImportant: false,
+    demo_link: 'https://youtu.be/X-UcvpsCLxI',
+    article_link: 'https://lukedoughty.me/pdfs/Article_CommandServer.pdf',
+  },
+  {
+    title: 'Autonomous Arduino Car with Obstacle Avoidance and Remote Control Capability',
+    year: '2025',
+    skills: ['Embedded Systems', 'C', 'Arduino', 'Ultrasonic Sensors', 'IR Sensors'],
+    bullet_points: [
+      "Made without Arduino libraries; performs bitwise operations and modifies registers directly",
+      "Follows walls and avoids obstacles using ultrasonic sensor",
+      "Generates PWM signals using hardware timers",
+      "Extensive documentation requirements",
+    ],
+    job_categories: {
+      'embedded': 5,
+    },
+    isImportant: true,
+    demo_link: 'https://youtube.com/shorts/RyhTZH5_kQA',
+    article_link: 'https://lukedoughty.me/pdfs/EmbeddedProject2Report.pdf',
+  },
+  {
+    title: 'Tailored Resume Builder powered by AI',
+    year: '2025',
+    skills: ['Django', 'React', 'SQLite', 'Python', 'Javascript', 'AI/ML'],
+    bullet_points: [
+      "Team Lead for CornHacks 2025",
+      "Developed web app to store job history, projects, and activities",
+      "Implemented keyword extraction model to build the optimal resume for a given job description",
+    ],
+    job_categories: {
+      'web_backend': 4,
+      'web_frontend': 2,
+      'networking': 2,
+      'ai': 3
+    },
+    isImportant: false, // I NEED TO FINISH THIS BRUH 
+    source_link: 'https://github.com/ldoughty05/django-resume-app',
+  },
+  {
+    title: 'Train Velocity Sensor and ETA Predictor',
+    year: '2025',
+    skills: ['Embedded Systems', 'C', 'Flask', 'PySerial', 'Arduino', 'LiDAR', 'REST APIs', 'SQLAlchemy', 'C', 'Python'],
+    bullet_points: [
+      "Won second place in 48-Hour Entrepreneurship Challenge",
+      "Led and managed development of LiDAR based velocity sensor",
+      "Serial data uploaded to Flask server and stored in SQLAlchemy database",
+      "Discussed product and business plans with local leaders from Hudl, Eat Fit Go, and the CoB",
+    ],
+    job_categories: {
+      'embedded': 4,
+      'networking': 3,
+      'web_backend': 3,
+      'entrepreneurship': 5,
+    },
+    isImportant: true,
+    article_link: 'https://www.linkedin.com/posts/lukedoughty_48hrchallenge-teamwork-entrepreneurship-activity-7299560592363687938-Bhjt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLliwBDzD8Odj3_4O2UMMgaehwwYc1-S4',
+    source_link: 'https://github.com/ldoughty05/48HourTrains',
+  },
+  {
+    title: 'Express.js Web Server with RESTful API',
     year: '2025',
     skills: ['Express.js', 'Typescript', 'REST APIs', 'Networking', 'Race Conditions', 'User Authentication'],
     bullet_points: [
       "Express and Typescript backend for React web app",
-      "Handles authentication and content delivery to multiple devices.",
+      "Handles authentication and content delivery to multiple devices",
     ],
     job_categories: {
       'embedded': 1,
@@ -19,12 +150,12 @@ export const projects = [
     year: '2025',
     skills: ['Cybersecurity', 'Burp Suite', 'Linux', 'REST APIs', 'bash'],
     bullet_points: [
-      "Cybersecurity, REST API, and bash fundamentals like curl, ssh, grep, and netcat.",
-      "Utilized Burp Suite to intercept and modify http requests to analyze a web server’s backend.",
-      "Solved all sixty-two “easy” CTF challenges."
+      "Cybersecurity, REST API, and bash fundamentals like curl, ssh, grep, and netcat",
+      "Utilized Burp Suite to intercept and modify http requests to analyze a web server’s backend",
+      "Competed as a team in the 2025 PicoCTF competition",
     ],
     job_categories: {
-      'cybersecurity': 2,
+      'cybersecurity': 3,
       'networking': 1,
       'web_backend': 1,
     },
@@ -37,15 +168,15 @@ export const projects = [
     skills: ['Embedded Systems', 'C', 'Interrupts', 'Memory Mapped I/O', 'Raspberry Pi', 'State Machines', 'Teamwork'],
     description: 'Combination Lock with a rotary encoder, a servomotor and raspberry pi pico. Users can reset the combination with a numeric keypad.',
     bullet_points: [
-      "Hardware includes a rotary encoder, servomotor, digital keypad, and Raspberry Pi Pico.",
-      "Takes input from rotary encoder using memory mapped i/o.",
-      "Watchdog timer for LED feedback.",
+      "Hardware includes a rotary encoder, servomotor, digital keypad, and Raspberry Pi Pico",
+      "Takes input from rotary encoder using memory mapped i/o",
+      "Hardware timer for LED feedback",
     ],
     job_categories: {
       'embedded': 3,
     },
     source_link: 'https://github.com/Minimac21/combolocklab',
-    isImportant: true,
+    isImportant: false,
   },
   {
     title: 'Hashing with Trading Cards',
@@ -53,9 +184,9 @@ export const projects = [
     skills: ['Hashing','JSON', 'React', 'Redux', 'Javascript', 'Search Engines'],
     description: 'Manage your trading cards. Add and remove cards. Search engine built with a hash map.',
     bullet_points: [
-      "React+Redux app to upload and manage your trading card collection.",
-      "Search engine using custom hash functions.",
-      "JSON file for persistent storage of trading card data.",
+      "React+Redux app to upload and manage your trading card collection",
+      "Search engine using custom hash functions",
+      "JSON file for persistent storage of trading card data",
     ],
     job_categories: {
       'web_backend': 3,
@@ -84,9 +215,9 @@ export const projects = [
     demo_link: 'https://musicplayer.lukedoughty.me/',
     article_link: 'https://lukedoughty.me/pdfs/Team_3_Final_Report.pdf',
     bullet_points: [
-      "Conducting user studies to evaluate the usability of a UI and making iterations to improve UX.",
-      "Doing research on user trends and making UI optimizations according to their behavior.",
-      "Meeting with potential users to discuss their needs.",
+      "Conducting user studies to evaluate the usability of a UI and making iterations to improve UX",
+      "Doing research on user trends and making UI optimizations according to their behavior",
+      "Meeting with potential users to discuss their needs",
     ],
     job_categories: {
       'web_frontend': 5,
@@ -107,12 +238,12 @@ export const projects = [
     description: 'Deep Learning Model using Google Earth Engine and Vertex Ai Platform to segment central pivot irrigators from satellite imagery',
     article_link: "/articles/CPISummer",
     bullet_points: [
-      "Deep learning model using Python, Google Earth Engine, and Vertex AI platform to segment central pivot irrigators from satellite imagery.",
-      "U-Net convolutional neural network used to detect agricultural infrastructure.",
-      "Useful in the event of a natural disaster, rural communities can be accounted for to get relief funding.",
+      "Deep learning model using Python, Google Earth Engine, and Vertex AI platform to segment central pivot irrigators from satellite imagery",
+      "U-Net convolutional neural network used to detect agricultural infrastructure",
+      "Useful in the event of a natural disaster, rural communities can be accounted for to get relief funding",
     ],
     job_categories: {
-      'ai': 8,
+      'ai': 5,
       'entrepreneurship': 3,
       'web_frontend': 1,
       'web_backend': 3,
@@ -123,42 +254,46 @@ export const projects = [
   {
     title: 'NEBP High Altitude Balloon',
     year: '2024',
-    skills: ['C', 'Arduino', 'Teensy4.1', 'Teamwork', 'Embedded Systems'],
+    skills: ['C', 'Arduino', 'Teensy4.1', 'Teamwork', 'Embedded Systems', 'Aerospace'],
     description: 'Log readings from various sensors connected to a Teensy 4.1 as part of the NASA National Eclipse Balloning Project.',
     bullet_points: [
-      "Team project in collaboration with NASA to film and take scientific readings during the 2024 total solar eclipse.",
-      "Created drivers that pull data from sensors using I2C and store that data on a microSD.",
-      "360 camera, as well as temperature, pressure, altitude, and UV radiation sensors.",
+      "Team project in collaboration with NASA to film and take scientific readings during the 2024 total solar eclipse",
+      "Created drivers that pull data from sensors using I2C and store that data on a microSD",
+      "360 camera, as well as temperature, pressure, altitude, and UV radiation sensors",
     ],
     job_categories: {
       'embedded': 5,
     },
-    article_link: "https://www.linkedin.com/posts/lukedoughty_nebp-activity-7183637700447465472-6yyz?utm_source=share&utm_medium=member_desktop",
+    article_link: 'https://www.iastatedigitalpress.com/ahac/article/17948/galley/16266/view/',
     isImportant: true,
 
   },
   {
     title: 'Global Trip Planner',
     year: '2024',
-    skills: ['Python', 'SQL', 'Kivy', 'Teamwork', 'Databases', 'REST APIs'],
+    skills: ['Python', 'SQLAlchemy', 'Kivy', 'Teamwork', 'Databases', 'REST APIs'],
     description: 'Helped Herbie Husker circumnavigate the globe by finding the optimal connecting flights based on weather data and real airport location data.',
     bullet_points: [
-      "Python app for calculating the optimal combination of flights to reach a faraway destination.",
-      "Realtime weather data from open-source REST API.",
-      "SQL database stores flight airport, and flight data.",
+      "Python app for calculating the optimal combination of flights to reach a faraway destination",
+      "Realtime weather data from open-source REST API",
+      "SQL database stores flight airport, and flight data",
     ],
     job_categories: {
-      'ai': 2,
+      'ai': 1,
       'entrepreneurship': 1,
       'web_backend': 3,
     },
-    isImportant: true,
+    isImportant: false,
   },
   {
     title: 'Character Classifier',
     year: '2024',
     skills: ['Python', 'Tensorflow', 'Keras', 'AI/ML'],
     description: 'Deep learning CNN MNIST classifier with a GUI so you can try it with your own handwriting.',
+    job_categories: {
+      'ai': 3,
+      'web_backend': 1,
+    },
     source_link: 'https://github.com/ldoughty05/character_classifier',
     article_link: 'https://lukedoughty.me/pdfs/MNIST_Report.pdf',
   },
@@ -194,8 +329,8 @@ export const projects = [
     skills: ['C#', 'Unity Game Engine', 'VR'],
     description: 'Go swimming and play water polo in this physics based VR game!',
     bullet_points: [
-      "Simulated a realistic swimming experience in Unity Game Engine.",
-      "Users can play games like water polo, where objects and the user have realistic buoyancy.",
+      "Simulated a realistic swimming experience in Unity Game Engine",
+      "Users can play games like water polo, where objects and the user have realistic buoyancy",
     ],
     job_categories: {
       'game': 2,
