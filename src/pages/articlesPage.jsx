@@ -1,5 +1,5 @@
-import { Desktop64 } from '../features/desktop64/desktop64.js'
-import { ContentWindow } from '../features/contentWindow/contentWindow.js'
+import { Desktop64 } from '../features/desktop64/desktop64.jsx'
+import { ContentWindow } from '../features/contentWindow/contentWindow.jsx'
 import { Outlet } from 'react-router-dom';
 export default function ArticlesPage() {
   return (

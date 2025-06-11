@@ -1,16 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 
-import HomePage from './pages/homePage.js';
-import ArticlePage from './pages/articlesPage.js';
+import HomePage from './pages/homePage';
+import ArticlePage from './pages/articlesPage';
 
-import { FileExplorer } from './features/contentWindow/contentWindow.js';
-import CBasics from './pages/articles/CBasics.js';
-import CPILocatorSummer from './pages/articles/CPILocatorSummer.js';
-import ReactBasics from './pages/articles/ReactBasics.js';
-import ReactQuickstart from './pages/articles/ReactQuickstart.js';
-import SetupGitOnLinux from './pages/articles/SetupGitLinux.js';
-import VimCheatSheet from './pages/articles/VimCheatSheet.js';
-import SOFT260Notes from './pages/articles/SOFT260CondensedNotes.js';
+import { FileExplorer } from './features/contentWindow/contentWindow';
+import CBasics from './pages/articles/CBasics';
+import CPILocatorSummer from './pages/articles/CPILocatorSummer';
+import ReactBasics from './pages/articles/ReactBasics';
+import ReactQuickstart from './pages/articles/ReactQuickstart';
+import SetupGitOnLinux from './pages/articles/SetupGitLinux';
+import VimCheatSheet from './pages/articles/VimCheatSheet';
+import SOFT260Notes from './pages/articles/SOFT260CondensedNotes';
 
 export function App() {
   return (

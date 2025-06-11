@@ -44,7 +44,7 @@ export function Home() {
         {/* <Link to="/aboutme">&gt; About Me</Link> */}
         <button onClick={panDownOnClick}>&gt; Projects</button>
         <a href='https://lukedoughty.me/pdfs/Term_4_Resume_Entrepreneur.pdf'>&gt; Resume</a>
-        <Link to="/articles/FileExplorer">&gt; Articles</Link>
+        <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LinkedIn</a>
       </div>
       <LinksBanner />
       <div className={styles.banners}>

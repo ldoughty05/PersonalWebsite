@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import { projects } from './projectsDictionary';
+import { useEffect } from 'react';
 
 LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
