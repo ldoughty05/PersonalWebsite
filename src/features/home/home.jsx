@@ -46,7 +46,6 @@ export function Home() {
         <a href='https://lukedoughty.me/pdfs/Term_4_Resume_Entrepreneur.pdf'>&gt; Resume</a>
         <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LinkedIn</a>
       </div>
-      <LinksBanner />
       <div className={styles.banners}>
         <div className={styles.largeBanner} style={{backgroundColor: 'var(--background-bold'}}>
             {isScrolled && <FontAwesomeIcon icon={faAngleUp} size="2x" onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}

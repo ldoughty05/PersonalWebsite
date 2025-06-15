@@ -1,8 +1,8 @@
 import styles from './homePage.module.css';
 
-import { Projects } from '../features/projects/projects.jsx';
-import { Home } from '../features/home/home.jsx'
-import { SkillsSummary } from '../features/skillsSummary/skillsSummary.js';
+import { Projects } from '../features/projects/projects';
+import { Home } from '../features/home/home'
+import { SkillsSummary } from '../features/skillsSummary/skillsSummary';
 export default function HomePage() {
   return (
     <>

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Link } from "react-router-dom";
 
-import { projects } from './projectsDictionary';
-import { useEffect } from 'react';
+import { projects as projectsdict } from './projectsDictionary';
+import { useEffect, useState } from 'react';
+import api from "../../projectExperienceAPI";
 
 LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
@@ -39,7 +40,7 @@ function LinkButton(props)
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
-  year: PropTypes.string.isRequired,
+  year: PropTypes.string,
   skills: PropTypes.array,
   description: PropTypes.string,
   bullet_points: PropTypes.arrayOf(PropTypes.string),
@@ -101,6 +102,22 @@ function ProjectCard(props){
 }
 
 export function Projects(){
+  const [projects, setProjects] = useState([]); // list of project experience objects
+
+  useEffect(() => {
+    getProjectsFromDatabase()
+  }, [])
+
+  const getProjectsFromDatabase = () => {
+    api
+      .get("/api/experiences/projects/")
+      .then((res) => res.data)
+      .then((data) => {
+        setProjects(data)
+      })
+      .catch((error) => {});
+  }
+  console.log(projects);
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>
@@ -115,13 +132,12 @@ export function Projects(){
           projects.map((project) =>
             <ProjectCard
               title={project.title}
-              year={project.year}
-              skills={project.skills}
-              description={project.description}
+              year={project.start_date && project.start_date.substring(0,4)}
+              skills={project.skills.map(skill_obj => skill_obj.name)}
               bullet_points={project.bullet_points}
-              source_link={project.source_link}
-              demo_link={project.demo_link}
-              article_link={project.article_link}
+              source_link={project.links.source}
+              demo_link={project.links.demo}
+              article_link={project.links.article}
               isImportant={project.isImportant}
               key={project.title}
             />
