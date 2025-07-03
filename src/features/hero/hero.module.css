@@ -1,135 +1,32 @@
-.home{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--background-bold);
-  height: 100vh;
-}
+/* hero.module.css */
 
-.logo {
-  height: 30vmin;
-  pointer-events: none;
-  margin: 0 10%;
-  margin-top: 10%;
-}
-
-.header h2 {
-  color: var(--font-color);
-  font-weight: normal;
-}
-
-.header hr {
-  width: 60%;
-}
-
-.home .links {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin: 0 20%;
-}
-.home a, .home button {
-  color: white;
-  text-decoration: none;
-  border-radius: 15px;
-  border-style: none;
-  background-color: transparent;
-  text-align: left;
-}
-
-.home .links a, .home .links button {
-  color: white;
-  font-family: "Source Code Pro", Monospace, "Lucida Console";
-  font-size: larger;
-  text-decoration: none;
-  margin-bottom: 1em;
-  padding: 20px;
-}
-
-.home a:hover, .home button:hover {
-  background-color: #ffffff47;
-}
-
-.uparrow {
-  padding-top: 10px;
-  color: var(--font-color);
-}
-
-.smallBanner, .largeBanner{
-  width: 100vw;
-}
-
-.smallBanner{
-  height: 25px;
-}
-
-.largeBanner{
-  height: 50px;
-}
-
-.linksBanner{
-  display: flex;
-  flex-direction: row-reverse;
-  overflow-x: hidden;
-  /* border: 3px solid var(--important-C); */
-}
-
-.linksBanner .outerBorder {
-  /* border: 2px solid var(--important-B); */
-  border-left: 15px solid var(--important-C);
-  border-right: 0;
-  margin-right: -20px; 
-  margin-left: 50px;
-
-  width: 100%;
-  max-width: 500px;
-  background-color: #4658d0;
-  color: var(--font-color);
-  transform: skew(-20deg);
-
-}
-
-.linksBanner .innerBorder {
-  /* border: 2px solid var(--important-B); */
-  border-left: 10px solid var(--important-B);
-}
-
-.linksBanner .content {
-  display: flex;
-  padding-left: 40px;
-  gap: 25px;
-  transform: skew(20deg);
-}
-
-.linksBanner .content a {
-  margin: 0;
-  padding: 5px;
-}
-
-/* HERO SECTION */
-/* HeroSection.css */
-
-.container {
+.hero {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-color: var(--background-bold);
 }
 
-.background {
+.backgroundImage {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  clip-path: polygon(0 0, 100vw 0, 100vw 55vh, 0 95vh);
+}
+
+@media (max-width: 768px) {
+  .backgroundImage {
+    clip-path: polygon(0 0, 100vw 0, 100vw 70vh, 0 95vh);
+  }
 }
 
 .content {
   position: relative;
   z-index: 1;
   color: #fff;
-  margin: 3em 6em;
+  margin: 3em 10em; /* vertical, horizontal */
 }
 
 @media (max-width: 768px) {
@@ -147,6 +44,7 @@
   font-weight: bold;
   padding: 0;
   margin: 0;
+  color: var(--hero-title);
 }
 
 .subtitle {
@@ -156,12 +54,21 @@
   margin-top: 0;
   width: fit-content;
   white-space: nowrap;
+  color: var(--hero-title);
 }
 
 .links {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 20vh;
+  color: var(--hero-links)
+}
+
+@media (min-width: 768px) {
+  .links {
+    width: 30vw;
+  }
 }
 
 .links a, .links button {
@@ -172,21 +79,34 @@
   text-align: left;
   font-size: 1.5rem;
   font-family: monospace;
-  padding:0;
+  padding: 0.5rem;
 }
 
 .links a:hover, .links button:hover {
-  text-decoration: underline;
+  background-color: #ffffff47;
 }
 
 .stripe {
+  background-color: var(--important-A);
+  transform: rotate(-15deg) translateX(-10%) translateY(-10%);
+  height: 2rem;
+  width: 120%;
+
+}
+
+.stripeText {
   font-family: 'Workbench', 'Times New Roman';
-  font-size: 1rem;
-  color: #F64822;
-  transform: rotate(-7deg) translateY(50%);
+  font-size: 2rem;
+  color:var(--important-A);
+  transform: rotate(-15deg);
   width: 100%;
   text-align: center;
   letter-spacing: 0.3rem;
-  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.uparrow {
+  padding-top: 10px;
+  color: var(--font-color);
 }
 

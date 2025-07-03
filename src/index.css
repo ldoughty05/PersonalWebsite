@@ -1,5 +1,7 @@
 :root {
   /* Colors */
+  --hero-title: #ffffff;
+  --hero-links: #ffffff;
   --font-color: rgba(240 240 255 / 100%);
   --background-bold: #F64822;
   --background-dull: #ffffff;

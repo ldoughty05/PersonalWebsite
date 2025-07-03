@@ -6,7 +6,6 @@ import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { ReactFitty } from "react-fitty";
 
 export function Hero() {
-  const LOGO = '/media/LukeDoughty-Yeezuz.png';
   const BACKGROUND_IMAGE_CLOUDS = "/media/CloudyWin98_RedHue.png"
   const [isScrolled, setIsScrolled] = useState(false);
   const containerRef = useRef();
@@ -44,8 +43,8 @@ export function Hero() {
   });
 
   return (
-    <div className={styles.container}>
-      <img src={BACKGROUND_IMAGE_CLOUDS} className={styles.background} />
+    <div className={styles.hero}>
+      <img src={BACKGROUND_IMAGE_CLOUDS} className={styles.backgroundImage} />
       <div className={styles.content} >
         <div className={styles.titleContainer} ref={containerRef}>
           <ReactFitty minSize={38} wrapText={true} className={styles.title} >LUKE DOUGHTY</ReactFitty>
@@ -56,13 +55,9 @@ export function Hero() {
           <a href="https://lukedoughty.me/pdfs/Term_4_Resume_Entrepreneur.pdf">&gt; RESUME</a>
           <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LINKED IN</a>
         </div>
-        <div className={styles.stripe}>WEB DEV, EMBEDDED SYSTEMS, AI/ML</div>
       </div>
-      <div className={styles.largeBanner} style={{backgroundColor: 'var(--background-bold'}}>
-            {isScrolled && <FontAwesomeIcon icon={faAngleUp} size="2x" onClick={panUpOnClick} className={styles.uparrow} alt="^"/>}
-        </div>
-        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-B)'}}></div>
-        <div className={styles.smallBanner} style={{backgroundColor: 'var(--important-C)'}}></div>
+      <div className={styles.stripeText}>WEB DEV, EMBEDDED SYSTEMS, AI/ML</div>
+      <div className={styles.stripe}></div>
     </div>
   );
 }

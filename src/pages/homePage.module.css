@@ -1,7 +1,0 @@
-.background {
-  background-color: var(--background-dull);
-  background-image:  radial-gradient(var(--important-A) 0.5px, transparent 0.5px), radial-gradient(var(--important-B) 0.5px, var(--background-dull) 0.5px);
-  background-size: 20px 20px;
-  background-position: 0 0,10px 10px;
-  overflow-x: hidden;
-}
