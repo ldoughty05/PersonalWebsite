@@ -6,7 +6,7 @@ Welcome to Luke Doughty's
  / ____/  __/ /  (__  ) /_/ / / / / /_/ / /    | |/ |/ /  __/ /_/ (__  ) / /_/  __/  
 /_/    \___/_/  /____/\____/_/ /_/\__,_/_/     |__/|__/\___/_.___/____/_/\__/\___/
 ```
-made by Luke Doughty himself -- using React and Vite with a Django backend serving my project experience from a PostreSQL database 🔥 
+made by Luke Doughty himself -- using **React** and **Vite** with a **Django** backend serving my project experience from a **PostreSQL** database 🔥 
 
 ## Installation
 1. clone the repository using  
@@ -23,9 +23,9 @@ made by Luke Doughty himself -- using React and Vite with a Django backend servi
 
 ## Architecture
 ### Frontend
-* React for the frontend which allows for the page to be made up of components which rerender quickly in response to any changes. Frontend developer staple.
-* Vite was useful for this project because it simplifys having different environment variables for development, testing, and production.
-* Redux is helpful for state management and makes prop drilling unnecessary. I set up the project expecting to use it, but I didn't. State just wasn't complex for this site.
+* **React** for the frontend which allows for the page to be made up of components which rerender quickly in response to any changes. Frontend developer staple.
+* **Vite** was useful for this project because it simplifys having different environment variables for development, testing, and production.
+* **Redux** is helpful for state management and makes prop drilling unnecessary. I set up the project expecting to use it, but I didn't. State just wasn't complex for this site.
 ### Backend
-* No backend specifically for this website, but it uses the same Django backend as my [fastresume](https://github.com/ldoughty05/fastresume) project.
-* Project experience is stored in a PostgreSQL relational database. This is useful because it also stores what skills are associated with each project. I can make changes on the fly and it updates on my website without needing to rebuild.
+* No backend specifically for this website, but it uses the same **Django** backend as my [fastresume](https://github.com/ldoughty05/fastresume) project.
+* Project experience is stored in a **PostgreSQL** relational database. This is useful because it also stores what skills are associated with each project. I can make changes on the fly and it updates on my website without needing to rebuild.
