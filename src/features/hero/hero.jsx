@@ -1,8 +1,5 @@
 import styles from './hero.module.css';
-import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { ReactFitty } from "react-fitty";
 
 export function Hero() {
@@ -56,24 +53,17 @@ export function Hero() {
           <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LINKED IN</a>
         </div>
       </div>
-      <div className={styles.stripeText}>WEB DEV, EMBEDDED SYSTEMS, AI/ML</div>
-      <div className={styles.stripe}></div>
+      <div className={styles.stripesContainer}>
+        <div className={styles.stripeText}>WEB DEV, EMBEDDED SYSTEMS, AI/ML</div>
+        <div className={styles.stripe}></div>
+      </div>
     </div>
   );
 }
 
 const panDownOnClick = () => {
-  window.scrollBy({
-      top: window.innerHeight - 100,
-      left: 0,
-      behavior:'smooth'
-  });
-}
-
-const panUpOnClick = () => {
-  window.scrollBy({
-      top:-window.innerHeight,
-      left: 0,
+  window.scrollTo({
+      top: window.innerHeight,
       behavior:'smooth'
   });
 }

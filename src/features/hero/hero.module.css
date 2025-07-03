@@ -13,13 +13,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  clip-path: polygon(0 0, 100vw 0, 100vw 55vh, 0 95vh);
-}
-
-@media (max-width: 768px) {
-  .backgroundImage {
-    clip-path: polygon(0 0, 100vw 0, 100vw 70vh, 0 95vh);
-  }
+  clip-path: polygon(0 0, 1000vh 0, 1000vh calc(100vh - 267vh), 0 95vh);
 }
 
 .content {
@@ -86,21 +80,32 @@
   background-color: #ffffff47;
 }
 
+.stripesContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform-origin: top left;
+  transform: rotate(-14.7deg) ;
+  top: calc(95vh - 8rem);
+  left: 0;
+  width: 100%;
+  height: 6rem;
+}
+
 .stripe {
   background-color: var(--important-A);
-  transform: rotate(-15deg) translateX(-10%) translateY(-10%);
   height: 2rem;
-  width: 120%;
-
+  width: 1000vh;
+  transform: translateX(-500vh);
 }
 
 .stripeText {
   font-family: 'Workbench', 'Times New Roman';
   font-size: 2rem;
   color:var(--important-A);
-  transform: rotate(-15deg);
   width: 100%;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.3rem;
   white-space: nowrap;
 }
