@@ -100,7 +100,7 @@
   transform: translateX(-500vh);
 }
 
-.stripeText {
+.stripeMarquee {
   font-family: 'Workbench', 'Times New Roman';
   font-size: 2rem;
   color:var(--important-A);
@@ -108,7 +108,27 @@
   text-align: left;
   letter-spacing: 0.3rem;
   white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
 }
+
+.marquee_inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee_inner span {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+@keyframes marquee {
+  from {transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
 
 .uparrow {
   padding-top: 10px;

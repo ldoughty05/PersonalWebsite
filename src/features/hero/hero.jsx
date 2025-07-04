@@ -54,7 +54,12 @@ export function Hero() {
         </div>
       </div>
       <div className={styles.stripesContainer}>
-        <div className={styles.stripeText}>WEB DEV, EMBEDDED SYSTEMS, AI/ML</div>
+        <div className={styles.stripeMarquee}>
+          <div className={styles.marquee_inner}>
+            <span>WEB DEV - EMBEDDED SYSTEMS - AI/ML - CYBERSECURITY - AUTOMATION -</span>
+            <span>WEB DEV - EMBEDDED SYSTEMS - AI/ML - CYBERSECURITY - AUTOMATION -</span>
+          </div>
+        </div>
         <div className={styles.stripe}></div>
       </div>
     </div>
