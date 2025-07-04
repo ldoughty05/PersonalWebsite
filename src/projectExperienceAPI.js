@@ -8,15 +8,17 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL
 });
 
-try {
-  const res = await api.get("/api/token/knownorigin/");
-  localStorage.setItem(ACCESS_TOKEN, res.data.access);
-  localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
-} catch (error) {
-  // alert(error)
+async function getToken() {
+  try {
+    const res = await api.get("/api/token/knownorigin/");
+    localStorage.setItem(ACCESS_TOKEN, res.data.access);
+    localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+  } catch (error) {
+    console.error("Failed to fetch token:", err);
+  }
 }
 
-
+getToken();
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem(ACCESS_TOKEN);
