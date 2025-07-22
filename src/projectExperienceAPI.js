@@ -14,7 +14,7 @@ async function getToken() {
     localStorage.setItem(ACCESS_TOKEN, res.data.access);
     localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
   } catch (error) {
-    console.error("Failed to fetch token:", err);
+    console.error("Failed to fetch token:", error);
   }
 }
 

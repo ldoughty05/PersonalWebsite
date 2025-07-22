@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Link } from "react-router-dom";
 
-import { projects as projectsdict } from './projectsDictionary';
+// import { projects as projectsdict } from './projectsDictionary';
 import { useEffect, useState } from 'react';
 import api from "../../projectExperienceAPI";
 
@@ -114,10 +114,11 @@ export function Projects(){
       .then((res) => res.data)
       .then((data) => {
         setProjects(data)
+        console.log("response: ", data);
       })
       .catch((error) => {});
   }
-  console.log(projects);
+  console.log("projects: ", projects);
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>
@@ -129,7 +130,7 @@ export function Projects(){
       </p>
       <div className={styles.grid}>
         { 
-          projects.map((project) =>
+          projects && projects.map((project, id) =>
             <ProjectCard
               title={project.title}
               year={project.start_date && project.start_date.substring(0,4)}
