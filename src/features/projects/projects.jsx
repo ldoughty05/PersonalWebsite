@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import { projects as projectsdict } from './projectsDictionary';
 import { useEffect, useState } from 'react';
-import api from "../../projectExperienceAPI";
+import { api } from "../../projectExperienceAPI";
 
 LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
@@ -104,9 +104,10 @@ function ProjectCard(props){
 export function Projects(){
   const [projects, setProjects] = useState([]); // list of project experience objects
 
-  useEffect(() => {
-    getProjectsFromDatabase()
-  }, [])
+  useEffect(() => {;
+      console.log("Fetching projects from database");
+      getProjectsFromDatabase()
+  }, []);
 
   const getProjectsFromDatabase = () => {
     api
@@ -117,8 +118,9 @@ export function Projects(){
         console.log("response: ", data);
       })
       .catch((error) => {});
+    console.log("projects: ", projects);
+
   }
-  console.log("projects: ", projects);
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>

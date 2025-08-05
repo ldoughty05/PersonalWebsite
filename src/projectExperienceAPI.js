@@ -10,20 +10,26 @@ const api = axios.create({
 
 async function getToken() {
   try {
+    if (localStorage.getItem(ACCESS_TOKEN) && localStorage.getItem(REFRESH_TOKEN)) {
+      console.log("Token already exists in localStorage.");
+      return;
+    }
     const res = await api.get("/api/token/knownorigin/");
     localStorage.setItem(ACCESS_TOKEN, res.data.access);
     localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
+    console.log("Token fetched and stored.");
   } catch (error) {
     console.error("Failed to fetch token:", error);
   }
 }
 
-getToken();
+await getToken();
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem(ACCESS_TOKEN);
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
+      console.log("Token added to request headers.");
     }
     return config;
   },
@@ -31,4 +37,5 @@ api.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-export default api;
+console.log("added interceptor");
+export {api, getToken};
