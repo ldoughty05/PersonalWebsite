@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import { projects as projectsdict } from './projectsDictionary';
 import { useEffect, useState } from 'react';
-import { api } from "../../projectExperienceAPI";
+import { api, authenticatedApi, getToken } from "../../projectExperienceAPI";
 
 LinkButton.propTypes = {
   link: PropTypes.string.isRequired,
@@ -104,22 +104,23 @@ function ProjectCard(props){
 export function Projects(){
   const [projects, setProjects] = useState([]); // list of project experience objects
 
-  useEffect(() => {;
-      console.log("Fetching projects from database");
-      getProjectsFromDatabase()
+  useEffect(() => {
+    const fetchData = async () => {
+      await getProjectsFromDatabase();
+    };
+    fetchData();
   }, []);
 
-  const getProjectsFromDatabase = () => {
-    api
-      .get("/api/experiences/projects/")
+
+  async function getProjectsFromDatabase() {
+    const token = localStorage.getItem("access");
+    authenticatedApi
+      .get("api/experiences/projects/")
       .then((res) => res.data)
       .then((data) => {
         setProjects(data)
-        console.log("response: ", data);
       })
-      .catch((error) => {});
-    console.log("projects: ", projects);
-
+      .catch((error) => {console.error("Error fetching projects:", error)});
   }
   return (
     <div className={styles.projects}>
