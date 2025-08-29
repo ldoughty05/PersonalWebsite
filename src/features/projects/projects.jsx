@@ -120,8 +120,25 @@ export function Projects(){
       .then((data) => {
         setProjects(data)
       })
-      .catch((error) => {console.error("Error fetching projects:", error)});
+      .catch((error) => {
+        console.error("Error fetching projects:", error);
+        console.log("Falling back to projects.json");
+        getProjectsFromJSON();
+      });
   }
+
+  function getProjectsFromJSON() {
+    // fallback if api is down
+    import("/src/features/projects/projects_fallback.json")
+      .then((module) => {
+        console.log(module.default);
+        setProjects(module.default);
+      })
+      .catch((error) => {
+        console.error("Error loading projects.json:", error);
+      });
+  }
+
   return (
     <div className={styles.projects}>
       <h1>Projects</h1>

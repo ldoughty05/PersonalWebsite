@@ -1,0 +1,801 @@
+[
+  {
+    "title": "United Airlines Seat Availability Predictor",
+    "bullet_points": [
+      "Scraping data and authenticating with UA website using Burp Suite and Python",
+      "Dockerized PostgreSQL database to make queries to find trends in seat availability over time",
+      "Scheduling data scraping job as bash script using Cron",
+      "Visualizing data using Matplotlib"
+    ],
+    "start_date": "2025-06-01",
+    "end_date": "2025-07-01",
+    "skills": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "PostgreSQL"
+      },
+      {
+        "name": "Docker"
+      },
+      {
+        "name": "Bash"
+      },
+      {
+        "name": "Cron"
+      },
+      {
+        "name": "Web Scraping"
+      },
+      {
+        "name": "Data Visualization"
+      },
+      {
+        "name": "Burp Suite"
+      },
+      {
+        "name": "Cybersecurity"
+      },
+      {
+        "name": "Data Science"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/standby_forecast",
+      "article": "https://lukedoughty.me/pdfs/StandbyTrendsReport.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "High Altitude Balloon Payload Development & Test Flight",
+    "bullet_points": [
+      "Stepping stone for the High Altitude Student Platform (HASP) project",
+      "Tested and validated solar cell mounting and wiring",
+      "Proved the reliablility of microcontroller code and data logging"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "C"
+      },
+      {
+        "name": "Arduino"
+      },
+      {
+        "name": "Teensy4.1"
+      },
+      {
+        "name": "Teamwork"
+      },
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "Aerospace"
+      }
+    ],
+    "links": {
+      "demo": "https://www.youtube.com/watch?v=nNtrG-YNFuc",
+      "source": "https://github.com/ldoughty05/HASP",
+      "article": "https://lukedoughty.me/pdfs/EmbeddedHABHonorsReport_Doughty.pdf"
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Sleeping Barber Problem Simulation",
+    "bullet_points": [
+      "Solution to a classic synchronization problem using semaphores and a monitor",
+      "Implemented using process forking and pthreads",
+      "Simulates a barber shop with multiple barbers and customers, each with their own threads"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "C"
+      },
+      {
+        "name": "Linux"
+      },
+      {
+        "name": "Pthreads"
+      },
+      {
+        "name": "Mutexes"
+      },
+      {
+        "name": "Semaphores"
+      },
+      {
+        "name": "Monitors"
+      },
+      {
+        "name": "Synchronization"
+      },
+      {
+        "name": "Operating Systems"
+      }
+    ],
+    "links": {
+      "demo": "https://youtu.be/QpPo_ZFVBw8",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/Article_BarberShop.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Zulip Open Source Contributions with Agile Team",
+    "bullet_points": [
+      "Implemented a 'bookmark topics' feature and improved the 'archive topics' feature",
+      "Prioritized tasks using user and developer stories",
+      "Kept stakeholders informed with weekly status meetings",
+      "Communicated new features to a varied audience of developers and non-developers"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "Django"
+      },
+      {
+        "name": "Agile"
+      },
+      {
+        "name": "Git"
+      },
+      {
+        "name": "Teamwork"
+      },
+      {
+        "name": "Rest APIs"
+      },
+      {
+        "name": "PostgreSQL"
+      }
+    ],
+    "links": {
+      "demo": "https://www.youtube.com/watch?v=jqLdCOmvmSw",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/Zulip_Release_Presentation_M2T7.pdf"
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Remote Shell Using Socket Programming",
+    "bullet_points": [
+      "Enter a command on the client process and have it executed on the server process with the output returned to the client",
+      "Implemented using process forking, sockets, and pipes",
+      "Server can handle multiple clients at once"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "C"
+      },
+      {
+        "name": "Sockets"
+      },
+      {
+        "name": "Pipes"
+      },
+      {
+        "name": "Linux"
+      },
+      {
+        "name": "Networking"
+      },
+      {
+        "name": "Synchronization"
+      },
+      {
+        "name": "Operating Systems"
+      }
+    ],
+    "links": {
+      "demo": "https://youtu.be/X-UcvpsCLxI",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/Article_CommandServer.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Autonomous Arduino Car with Obstacle Avoidance and Remote Control Capability",
+    "bullet_points": [
+      "Made without Arduino libraries; performs bitwise operations and modifies registers directly",
+      "Follows walls and avoids obstacles using ultrasonic sensor",
+      "Generates PWM signals using hardware timers",
+      "Extensive documentation requirements"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "C"
+      },
+      {
+        "name": "Arduino"
+      },
+      {
+        "name": "Ultrasonic Sensors"
+      },
+      {
+        "name": "IR Sensors"
+      }
+    ],
+    "links": {
+      "demo": "https://youtube.com/shorts/RyhTZH5_kQA",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/EmbeddedProject2Report.pdf"
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Tailored Resume Builder powered by AI",
+    "bullet_points": [
+      "Team Lead for CornHacks 2025",
+      "Developed web app to store job history, projects, and activities",
+      "Implemented keyword extraction model to build the optimal resume for a given job 'description'"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Django"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "SQLite"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Javascript"
+      },
+      {
+        "name": "AI/ML"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/django-resume-app",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Train Velocity Sensor and ETA Predictor",
+    "bullet_points": [
+      "Won second place in 48-Hour Entrepreneurship Challenge",
+      "Led and managed development of LiDAR based velocity sensor",
+      "Serial data uploaded to Flask server and stored in SQLAlchemy database",
+      "Discussed product and business plans with local leaders from Hudl, Eat Fit Go, and the CoB"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "C"
+      },
+      {
+        "name": "Flask"
+      },
+      {
+        "name": "PySerial"
+      },
+      {
+        "name": "Arduino"
+      },
+      {
+        "name": "LiDAR"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "SQLAlchemy"
+      },
+      {
+        "name": "C"
+      },
+      {
+        "name": "Python"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/48HourTrains",
+      "article": "https://www.linkedin.com/posts/lukedoughty_48hrchallenge-teamwork-entrepreneurship-activity-7299560592363687938-Bhjt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLliwBDzD8Odj3_4O2UMMgaehwwYc1-S4"
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Express.js Web Server with RESTful API",
+    "bullet_points": [
+      "Express and Typescript backend for React web app",
+      "Handles authentication and content delivery to multiple devices"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Express.js"
+      },
+      {
+        "name": "Typescript"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "Networking"
+      },
+      {
+        "name": "Race Conditions"
+      },
+      {
+        "name": "User Authentication"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Carnegie Mellon University PicoCTF",
+    "bullet_points": [
+      "Cybersecurity, REST API, and bash fundamentals like curl, ssh, grep, and netcat",
+      "Utilized Burp Suite to intercept and modify http requests to analyze a web server\u2019s backend",
+      "Competed as a team in the 2025 PicoCTF competition"
+    ],
+    "start_date": "2025-01-01",
+    "end_date": "2025-05-01",
+    "skills": [
+      {
+        "name": "Cybersecurity"
+      },
+      {
+        "name": "Burp Suite"
+      },
+      {
+        "name": "Linux"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "bash"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "https://www.linkedin.com/posts/lukedoughty_despite-the-growing-uneasiness-of-the-software-activity-7287136156956213248-8wsi?utm_source=share&utm_medium=member_desktop"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Embedded Combo Lock",
+    "bullet_points": [
+      "Hardware includes a rotary encoder, servomotor, digital keypad, and Raspberry Pi Pico",
+      "Takes input from rotary encoder using memory mapped i/o",
+      "Hardware timer for LED feedback"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "C"
+      },
+      {
+        "name": "Interrupts"
+      },
+      {
+        "name": "Memory Mapped I/O"
+      },
+      {
+        "name": "Raspberry Pi"
+      },
+      {
+        "name": "State Machines"
+      },
+      {
+        "name": "Teamwork"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/Minimac21/combolocklab",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Hashing with Trading Cards",
+    "bullet_points": [
+      "React+Redux app to upload and manage your trading card collection",
+      "Search engine using custom hash functions",
+      "JSON file for persistent storage of trading card data"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Hashing"
+      },
+      {
+        "name": "JSON"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Redux"
+      },
+      {
+        "name": "Javascript"
+      },
+      {
+        "name": "Search Engines"
+      }
+    ],
+    "links": {
+      "demo": "http://tradingcards.lukedoughty.me/",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Knapsack Optimizer",
+    "bullet_points": [],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Dynamic Programming"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Redux"
+      },
+      {
+        "name": "Javascript"
+      }
+    ],
+    "links": {
+      "demo": "https://candy.lukedoughty.me/",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Mobile App UX Team",
+    "bullet_points": [
+      "Conducting user studies to evaluate the usability of a UI and making iterations to improve UX",
+      "Doing research on user trends and making UI optimizations according to their behavior",
+      "Meeting with potential users to discuss their needs"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "UX User Testing"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Redux"
+      },
+      {
+        "name": "Javascript"
+      },
+      {
+        "name": "Teamwork"
+      }
+    ],
+    "links": {
+      "demo": "https://musicplayer.lukedoughty.me/",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/Team_3_Final_Report.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "This Website!",
+    "bullet_points": [],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "React"
+      },
+      {
+        "name": "Redux"
+      },
+      {
+        "name": "Javascript"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Ag Infrastructure Segmentation Model",
+    "bullet_points": [
+      "Deep learning model using Python, Google Earth Engine, and Vertex AI platform to segment central pivot irrigators from satellite imagery",
+      "U-Net convolutional neural network used to detect agricultural infrastructure",
+      "Useful in the event of a natural disaster, rural communities can be accounted for to get relief funding"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Tensorflow"
+      },
+      {
+        "name": "Keras"
+      },
+      {
+        "name": "Javascript"
+      },
+      {
+        "name": "Parallel Programming"
+      },
+      {
+        "name": "Apache Beam"
+      },
+      {
+        "name": "Google Cloud"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "AI/ML"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "/articles/CPISummer"
+    },
+    "isImportant": true
+  },
+  {
+    "title": "NEBP High Altitude Balloon",
+    "bullet_points": [
+      "Team project in collaboration with NASA to film and take scientific readings during the 2024 total solar eclipse",
+      "Created drivers that pull data from sensors using I2C and store that data on a microSD",
+      "360 camera, as well as temperature, pressure, altitude, and UV radiation sensors"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "C"
+      },
+      {
+        "name": "Arduino"
+      },
+      {
+        "name": "Teensy4.1"
+      },
+      {
+        "name": "Teamwork"
+      },
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "Aerospace"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "https://www.iastatedigitalpress.com/ahac/article/17948/galley/16266/view/"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Global Trip Planner",
+    "bullet_points": [
+      "Python app for calculating the optimal combination of flights to reach a faraway destination",
+      "Realtime weather data from open-source REST API",
+      "SQL database stores flight airport, and flight data"
+    ],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "SQLAlchemy"
+      },
+      {
+        "name": "Kivy"
+      },
+      {
+        "name": "Teamwork"
+      },
+      {
+        "name": "Databases"
+      },
+      {
+        "name": "REST APIs"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Character Classifier",
+    "bullet_points": [],
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-01",
+    "skills": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Tensorflow"
+      },
+      {
+        "name": "Keras"
+      },
+      {
+        "name": "AI/ML"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/character_classifier",
+      "article": "https://lukedoughty.me/pdfs/MNIST_Report.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Deep Learning Basics",
+    "bullet_points": [],
+    "start_date": "2023-01-01",
+    "end_date": "2023-05-01",
+    "skills": [
+      {
+        "name": "Python"
+      },
+      {
+        "name": "AI/ML"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/Deep-Learning",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": ".wav File Formatter",
+    "bullet_points": [],
+    "start_date": "2023-01-01",
+    "end_date": "2023-05-01",
+    "skills": [
+      {
+        "name": "Bash"
+      },
+      {
+        "name": "FFmpeg"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Boid Simulator",
+    "bullet_points": [],
+    "start_date": "2023-01-01",
+    "end_date": "2023-05-01",
+    "skills": [
+      {
+        "name": "C++"
+      },
+      {
+        "name": "OpenGL"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/boidSim",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Snake Game with Evolutionary AI",
+    "bullet_points": [],
+    "start_date": "2022-01-01",
+    "end_date": "2022-05-01",
+    "skills": [
+      {
+        "name": "Java"
+      },
+      {
+        "name": "AI/ML"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
+    "title": "SwimSim",
+    "bullet_points": [
+      "Simulated a realistic swimming experience in Unity Game Engine",
+      "Users can play games like water polo, where objects and the user have realistic buoyancy"
+    ],
+    "start_date": "2021-01-01",
+    "end_date": "2021-05-01",
+    "skills": [
+      {
+        "name": "C#"
+      },
+      {
+        "name": "Unity Game Engine"
+      },
+      {
+        "name": "VR"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  }
+]
