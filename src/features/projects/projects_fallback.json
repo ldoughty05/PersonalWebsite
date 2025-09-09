@@ -1,5 +1,99 @@
 [
   {
+    "title": "HASP Downlink Website",
+    "bullet_points": [
+      "Front end gives users a description of the payload, flight status, and live graphs of sensor data",
+      "Scrapes HASP website for latest flight data using Python and Burp Suite",
+      "Minimizes traffic to HASP database by caching payload data in a Redis store"
+    ],
+    "start_date": "2025-07-01",
+    "end_date": "2025-08-01",
+    "skills": [
+      {
+        "name": "Web Scraping"
+      },
+      {
+        "name": "Python"
+      },
+      { 
+        "name": "Burp Suite"
+      },
+      {
+        "name": "Flask"
+      },
+      {
+        "name": "Redis"
+      },
+      {
+        "name": "REST APIs"
+      },
+      {
+        "name": "Full Stack"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "JavaScript"
+      },
+      {
+        "name": "Aerospace"
+      },
+      {
+        "name": "Data Visualization"
+      },
+      {
+        "name": "Data Science"
+      }
+    ],
+    "links": {
+      "demo": "https://hasp.lukedoughty.me",
+      "source": "https://github.com/ldoughty05/hasp-downlink-website",
+      "article": ""
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Python Server Hosted Locally on Raspberry Pi",
+    "bullet_points": [
+      "Affordable home server for hosting full stack web applications",
+      "Automatically pulls updates from GitHub, manages dependencies, and logs activity and errors",
+      "Nginx reverse proxy with Gunicorn to serve Flask applications",
+      "Systemd services to serve frontend static files"
+    ],
+    "start_date": "2025-06-01",
+    "end_date": "2025-07-01",
+    "skills": [
+      {
+        "name": "Bash"
+      },
+      {
+        "name": "CI/CD"
+      },
+      {
+        "name": "DevOps"
+      },
+      {
+        "name": "Raspberry Pi"
+      },
+      {
+        "name": "Nginx"
+      },
+      {
+        "name": "Gunicorn"
+      },
+      {
+        "name": "Linux"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
     "title": "United Airlines Seat Availability Predictor",
     "bullet_points": [
       "Scraping data and authenticating with UA website using Burp Suite and Python",
@@ -243,11 +337,10 @@
     "isImportant": true
   },
   {
-    "title": "Tailored Resume Builder powered by AI",
+    "title": "Resume Builder Web App",
     "bullet_points": [
       "Team Lead for CornHacks 2025",
-      "Developed web app to store job history, projects, and activities",
-      "Implemented keyword extraction model to build the optimal resume for a given job 'description'"
+      "Developed web app to store job history, projects, and activities"
     ],
     "start_date": "2025-01-01",
     "end_date": "2025-05-01",
@@ -266,9 +359,6 @@
       },
       {
         "name": "Javascript"
-      },
-      {
-        "name": "AI/ML"
       }
     ],
     "links": {
