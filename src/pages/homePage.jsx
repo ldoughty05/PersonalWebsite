@@ -28,7 +28,6 @@ export default function HomePage() {
           <div className={styles.stripe_small} style={{ backgroundColor: 'var(--important-B)' }}></div>
           <div className={styles.stripe_small} style={{ backgroundColor: 'var(--important-C)' }}></div>
         </div>
-        <SkillsSummary />
         <Projects />
       </div>
       <Ribbon />
