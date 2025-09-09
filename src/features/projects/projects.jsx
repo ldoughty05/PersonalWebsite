@@ -122,7 +122,7 @@ export function Projects(){
       })
       .catch((error) => {
         console.error("Error fetching projects:", error);
-        console.log("Falling back to projects.json");
+        console.log("Falling back to projects_fallback.json");
         getProjectsFromJSON();
       });
   }
