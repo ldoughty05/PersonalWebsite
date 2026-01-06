@@ -49,15 +49,15 @@ export function Hero() {
         </div>
         <div className={styles.links}>
           <button onClick={panDownOnClick}>&gt; PROJECTS</button>
-          <a href="https://lukedoughty.me/pdfs/Term_4.5_Resume_Generic.pdf">&gt; RESUME</a>
-          <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LINKED IN</a>
+          <a href="https://lukedoughty.me/pdfs/Term5ResumeEmbeddedLaTeX.pdf">&gt; RESUME</a>
+          <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LINKEDIN</a>
         </div>
       </div>
       <div className={styles.stripesContainer}>
         <div className={styles.stripeMarquee}>
           <div className={styles.marquee_inner}>
-            <span>WEB DEV - EMBEDDED SYSTEMS - AI/ML - CYBERSECURITY - AUTOMATION -</span>
-            <span>WEB DEV - EMBEDDED SYSTEMS - AI/ML - CYBERSECURITY - AUTOMATION -</span>
+            <span>WEB DEV - AI/ML - CYBERSECURITY - EMBEDDED SYSTEMS - AUTOMATION -</span>
+            <span>WEB DEV - AI/ML - CYBERSECURITY - EMBEDDED SYSTEMS - AUTOMATION -</span>
           </div>
         </div>
         <div className={styles.stripe}></div>

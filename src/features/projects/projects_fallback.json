@@ -1,5 +1,203 @@
 [
   {
+    "title": "Agentic UML Diagram Generator",
+    "bullet_points": [
+      "Generates PlantUML code from incomplete hand-drawn UML diagrams or textual system descriptions",
+      "Google Gemini Agent establishes context of sytem and extrapolates missing entities, relations, and constraints",
+      "Improves productivity of software architects and developers by automating tedious diagram creation tasks"
+    ],
+    "start_date": "2025-04-20",
+    "end_date": "2025-5-10",
+    "skills": [
+      {
+        "name": "AI/ML"
+      },
+      {
+        "name": "Google Gemini"
+      },
+      {
+        "name": "UML Diagramming"
+      },
+      {
+        "name": "Software Architecture"
+      },
+      {
+        "name": "Python"
+      },
+      {
+        "name": "Agentic AI"
+      },
+      {
+        "name": "Prompt Engineering"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "https://github.com/ldoughty05/AgenticPlantUMLGenerator",
+      "article": "https://lukedoughty.me/pdfs/AgenticUMLDiagramGenerator.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Secure Messaging App",
+    "bullet_points": [
+      "End-to-end encrypted messaging app for secure communication",
+      "Implements Diffie-Hellman key exchange to prevent man-in-the-middle key interception",
+      "Sends messages to web sockets so that messages are received in real-time rather than polling the server",
+      "Features JSON Web Tokens for user authentication and authorization"
+    ],
+    "start_date": "2025-09-01",
+    "end_date": "2025-11-22",
+    "skills": [
+      {
+        "name": "React"
+      },
+      {
+        "name": "Node.js"
+      },
+      {
+        "name": "Express.js"
+      },
+      {
+        "name": "WebSockets"
+      },
+      {
+        "name": "Cryptography"
+      },
+      {
+        "name": "Diffie-Hellman"
+      },
+      {
+        "name": "JWT"
+      },
+      {
+        "name": "Full Stack"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/SecureMessagingAppReport.pdf"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Custom Arithmetic Programming Language",
+    "bullet_points": [
+      "Creating my own programming language capable of arithmetic and declaring variables",
+      "Implementing stateless and recursive logic using a functional programming language called Racket",
+      "Developing an intuitive understanding of interpreters and programming language grammars"
+    ],
+    "start_date": "2025-09-01",
+    "end_date": "2025-11-22",
+    "skills": [
+      {
+        "name": "Racket"
+      },
+      {
+        "name": "Functional Programming"
+      },
+      {
+        "name": "Recursion"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+    {
+    "title": "Autocard: Agentic Flashcard Generator (Hack Midwest 2025)",
+    "bullet_points": [
+      "Intelligently generates a set of quiz questions for any type of user uploaded study material",
+      "Matches users with study partners based on similar study material using MogoDB Atlas Vector Search"
+    ],
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-02",
+    "skills": [
+      {
+        "name": "React"
+      },
+      {
+        "name": "Node.js"
+      },
+      {
+        "name": "Express.js"
+      },
+      {
+        "name": "MongoDB"
+      },
+      {
+        "name": "AI/ML"
+      },
+      {
+        "name": "OpenAI API"
+      },
+      {
+        "name": "Vector Databases"
+      },
+      {
+        "name": "Full Stack"
+      },
+      {
+        "name": "TypeScript"
+      },
+      {
+        "name": "AWS Bedrock"
+      },
+      {
+        "name": "Agentic AI"
+      },
+      {
+        "name": "Prompt Engineering"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "https://www.linkedin.com/posts/lukedoughty_i-slept-in-my-car-after-hackmidwest-2025-activity-7383170711349202944-VwD4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADtLliwBDzD8Odj3_4O2UMMgaehwwYc1-S4"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "Digital Wrist Watch Printed Circuit Board",
+    "bullet_points": [
+      "Designing and printed a 4 layer circuit board carrying a microcontroller, an I2C bus, and connecting to a coin cell battery",
+      "Isolating digital signal lines using a grounding plane",
+      "Installing protective and supportive circuits"
+    ],
+    "start_date": "2025-08-01",
+    "end_date": "2025-09-01",
+    "skills": [
+      {
+        "name": "KiCad"
+      },
+      {
+        "name": "Circuits"
+      },
+      {
+        "name": "Electronics"
+      },
+      {
+        "name": "Computer Aided Drafting"
+      },
+      {
+        "name": "PCB Making"
+      },
+      {
+        "name": "Embedded Systems"
+      }
+    ],
+    "links": {
+      "demo": "https://lukedoughty.me/pdfs/WatchPCB_Image.JPEG",
+      "source": "https://lukedoughty.me/pdfs/watch.pdf",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
     "title": "HASP Downlink Website",
     "bullet_points": [
       "Front end gives users a description of the payload, flight status, and live graphs of sensor data",
@@ -49,7 +247,7 @@
     "links": {
       "demo": "https://hasp.lukedoughty.me",
       "source": "https://github.com/ldoughty05/hasp-downlink-website",
-      "article": ""
+      "article": "https://lukedoughty.me/pdfs/Perovskite_Solar_Cells_on_High_Altitude_Balloon_Payloads.pdf"
     },
     "isImportant": true
   },
@@ -280,6 +478,15 @@
         "name": "Sockets"
       },
       {
+        "name": "WebSockets"
+      },
+      {
+        "name": "Pthreads"
+      },
+      {
+        "name": "Forking"
+      },
+      {
         "name": "Pipes"
       },
       {
@@ -337,7 +544,7 @@
     "isImportant": true
   },
   {
-    "title": "Resume Builder Web App",
+    "title": "Resume Builder Web App (CornHacks 2025)",
     "bullet_points": [
       "Team Lead for CornHacks 2025",
       "Developed web app to store job history, projects, and activities"
@@ -620,29 +827,6 @@
     "isImportant": false
   },
   {
-    "title": "This Website!",
-    "bullet_points": [],
-    "start_date": "2024-01-01",
-    "end_date": "2024-05-01",
-    "skills": [
-      {
-        "name": "React"
-      },
-      {
-        "name": "Redux"
-      },
-      {
-        "name": "Javascript"
-      }
-    ],
-    "links": {
-      "demo": "",
-      "source": "",
-      "article": ""
-    },
-    "isImportant": false
-  },
-  {
     "title": "Ag Infrastructure Segmentation Model",
     "bullet_points": [
       "Deep learning model using Python, Google Earth Engine, and Vertex AI platform to segment central pivot irrigators from satellite imagery",
@@ -680,7 +864,7 @@
     "links": {
       "demo": "",
       "source": "",
-      "article": "/articles/CPISummer"
+      "article": ""
     },
     "isImportant": true
   },
@@ -784,7 +968,11 @@
   },
   {
     "title": "Deep Learning Basics",
-    "bullet_points": [],
+    "bullet_points": [
+      "Learning the basics of neural networks by following Deep Learning by Andrew Transk",
+      "Implemented feedforward neural networks, convolutional neural networks, and recurrent neural networks from scratch using Python and Numpy",
+      "Gained intuition on how deep learning libraries like pycharm work by building my own from the ground up"
+    ],
     "start_date": "2023-01-01",
     "end_date": "2023-05-01",
     "skills": [
@@ -793,6 +981,12 @@
       },
       {
         "name": "AI/ML"
+      },
+      {
+        "name": "Numpy"
+      },
+      {
+        "name": "Pycharm"
       }
     ],
     "links": {
@@ -882,7 +1076,7 @@
       }
     ],
     "links": {
-      "demo": "",
+      "demo": "https://www.youtube.com/watch?v=MNl3rQUeDoo",
       "source": "",
       "article": ""
     },
