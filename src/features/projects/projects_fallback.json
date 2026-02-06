@@ -1,5 +1,66 @@
 [
   {
+    "title": "Arduino Library and PCB for Analog Devices AD5933",
+    "bullet_points": [
+      "Created an Arduino library to interface with the AD5933 impedance converter via I2C",
+      "Library supports calibration, frequency sweeping, and real-time impedance measurements",
+      "Designed the PCB for a custom analog frontend to condition signals for accurate impedance measurements",
+      "Minimized noise from parasitic impedance by separating digital signals and using a ground plane"
+    ],
+    "start_date": "2026-01-15",
+    "end_date": "2026-02-06",
+    "skills": [
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "C++"
+      },
+      {
+        "name": "PCB Design"
+      },
+      {
+        "name": "I2C"
+      },
+      {
+        "name": "Signal Processing"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": true
+  },
+  {
+    "title": "Mr. Fish Bluetooth Speaker",
+    "bullet_points": [
+    ],
+    "start_date": "2026-01-20",
+    "end_date": "2026-01-31",
+    "skills": [
+      {
+        "name": "Embedded Systems"
+      },
+      {
+        "name": "C"
+      },
+      {
+        "name": "Bluetooth"
+      },
+      {
+        "name": "Audio Processing"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": ""
+    },
+    "isImportant": false
+  },
+  {
     "title": "Agentic UML Diagram Generator",
     "bullet_points": [
       "Generates PlantUML code from incomplete hand-drawn UML diagrams or textual system descriptions",
