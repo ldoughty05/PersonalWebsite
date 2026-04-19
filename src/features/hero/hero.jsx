@@ -49,7 +49,7 @@ export function Hero() {
         </div>
         <div className={styles.links}>
           <button onClick={panDownOnClick}>&gt; PROJECTS</button>
-          <a href="https://lukedoughty.me/pdfs/Term5ResumeEmbeddedLaTeX.pdf">&gt; RESUME</a>
+          <a href="https://lukedoughty.me/pdfs/Term6_5ResumeEmbeddedLaTeX.pdf">&gt; RESUME</a>
           <a href="https://www.linkedin.com/in/lukedoughty/">&gt; LINKEDIN</a>
         </div>
       </div>

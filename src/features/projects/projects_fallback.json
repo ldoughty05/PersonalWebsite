@@ -1,5 +1,108 @@
 [
   {
+    "title": "Rideshare Price Predictor",
+    "bullet_points": [
+      "Predict Uber and Lyft cab prices based on historical pricing and weather data using scikit-learn",
+      "Compares the effectiveness of gradient boosted regressors vs a nonlinear support vector regressor based on R2 score and mean absolute error",
+      "Trained on over 600k data points using a research computing node on the Holland Computing Center's SWAN supercomputer"
+    ],
+    "start_date": "2026-04-01",
+    "end_date": "2026-04-12",
+    "skills": [
+      {
+        "name": "AI/ML"
+      },
+      {
+        "name": "Support Vector Machines"
+      },
+      {
+        "name": "Decision Trees"
+      },
+      {
+        "name": "Data Science"
+      },
+      {
+        "name": "Data Visualization"
+      },
+      {
+        "name": "Scikit-Learn"
+      },
+      {
+        "name": "Python"
+      }
+    ],
+    "links": {
+      "demo": "",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/MachineLearningReport.pdf"
+    }
+  },
+  {
+    "title": "FPGA Function Generator",
+    "bullet_points": [
+      "Designed a real-time function generator on FPGA, capable of producing and manipulating sin waves",
+      "Uses a BRAM lookup table to generate waveforms in linear time rather than computing each point using a Taylor series expansion"
+    ],
+    "start_date": "2026-03-27",
+    "end_date": "2026-04-03",
+    "skills": [
+      {
+        "name": "FPGA"
+      },
+      {
+        "name": "VHDL"
+      },
+      {
+        "name": "Vivado"
+      },
+      {
+        "name": "Digital Signal Processing"
+      },
+      {
+        "name": "Hardware Design"
+      }
+    ],
+    "links": {
+      "demo": "https://youtube.com/shorts/RvXKdJIb3rU",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/FunctionGeneratorREADME.md"
+    },
+    "isImportant": false
+  },
+  {
+    "title": "FPGA Oscilloscope",
+    "bullet_points": [
+      "Designed a real-time digital oscilloscope on FPGA, including signal capture, buffering, and VGA rasterization",
+      "Implemented timing-accurate VGA controller and pixel pipeline in VHDL",
+      "Validated signal integrity and display latency using Vivado simulator and external test equipment"
+    ],
+    "start_date": "2026-01-26",
+    "end_date": "2026-03-11",
+    "skills": [
+      {
+        "name": "FPGA"
+      },
+      {
+        "name": "VHDL"
+      },
+      {
+        "name": "Vivado"
+      },
+      {
+        "name": "Digital Signal Processing"
+      },
+      {
+        "name": "Hardware Design"
+      }
+    ],
+    "links": {
+      "demo": "https://youtube.com/shorts/MTYOQtlbG-w",
+      "source": "",
+      "article": "https://lukedoughty.me/pdfs/OscopeREADME.md"
+    },
+    "isImportant": true
+  },
+  {
     "title": "Arduino Library and PCB for Analog Devices AD5933",
     "bullet_points": [
       "Created an Arduino library to interface with the AD5933 impedance converter via I2C",
@@ -28,7 +131,7 @@
     ],
     "links": {
       "demo": "",
-      "source": "",
+      "source": "https://github.com/UNL-Aerospace-Experimental-Payloads/AXP-AD5933",
       "article": ""
     },
     "isImportant": true
@@ -37,7 +140,7 @@
     "title": "Mr. Fish Bluetooth Speaker",
     "bullet_points": [
       "Engineered a portable Bluetooth fish speaker whose mouth moves in sync with audio playback",
-      "Utilized an esp32 microcontroller to handle Bluetooth communication and audio decoding",
+      "Utilized an esp32 microcontroller to handle Bluetooth communication and a vowel detection algorithm",
       "Audio signal is processed using an I2S DAC and amplified to drive a small speaker"
     ],
     "start_date": "2026-01-20",
